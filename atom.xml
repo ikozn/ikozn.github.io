@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.ikozn.com/</id>
     <title>Hooyu&apos;s Note</title>
-    <updated>2019-09-22T17:26:51.808Z</updated>
+    <updated>2019-09-22T17:28:35.540Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.ikozn.com/"/>
     <link rel="self" href="https://blog.ikozn.com//atom.xml"/>
@@ -1262,5 +1262,110 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
         <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/31/5abf6bb365875.jpg" alt=""></figure>
 <p>自在逍遥！</p>
 <!--more-->]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[实验记录]单设备双出口NAT]]></title>
+        <id>https://blog.ikozn.com//post/实验记录-单设备双出口NAT</id>
+        <link href="https://blog.ikozn.com//post/实验记录-单设备双出口NAT">
+        </link>
+        <updated>2017-05-23T03:59:26.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="一-需求">一、需求</h2>
+<p>访问联通(20.20.20.0/24)网段的流量走联通<br>
+其他流量默认走电信<br>
+两条链路互为备份<br>
+R3为出口路由器<br>
+使用PAT进行NAT</p>
+]]></summary>
+        <content type="html"><![CDATA[<h2 id="一-需求">一、需求</h2>
+<p>访问联通(20.20.20.0/24)网段的流量走联通<br>
+其他流量默认走电信<br>
+两条链路互为备份<br>
+R3为出口路由器<br>
+使用PAT进行NAT</p>
+<!--more-->
+<h2 id="二-关键配置">二、关键配置</h2>
+<pre><code>R3_config#interface GigaEthernet0/3
+R3_config_g0/3# ip nat outside    //设置出口为outside
+R3_config_g0/3#!
+R3_config#interface GigaEthernet0/4
+R3_config_g0/4# ip nat outside    //设置出口为outside
+R3_config_g0/4#!
+R3_config#interface GigaEthernet0/5
+R3_config_g0/5# ip policy route-map PBR    //应用PBR
+R3_config_g0/5# ip nat inside    //设置出口为inside
+R3_config_g0/5#!
+R3_config#ip access-list extended LT    //匹配去往联通的流量
+R3_config_ext_nacl# permit ip any 23.23.23.0 255.255.255.0
+R3_config_ext_nacl# permit ip any 20.20.20.0 255.255.255.0
+R3_config_ext_nacl#!
+R3_config#ip access-list extended DX     //匹配出外网的其他的流量
+R3_config_ext_nacl# deny   ip any 23.23.23.0 255.255.255.0
+R3_config_ext_nacl# deny   ip any 20.20.20.0 255.255.255.0
+R3_config_ext_nacl# permit ip any any    
+R3_config_ext_nacl#!
+R3_config#ip access-list standard USER1    //匹配内网用户
+R3_config_std_nacl# permit 3.3.3.0 255.255.255.0
+R3_config_std_nacl#!
+R3_config#ip access-list standard USER2    //匹配内网用户
+R3_config_std_nacl# permit 3.3.3.0 255.255.255.0
+R3_config_std_nacl#!
+R3_config#route-map PBR 10 permit
+R3_config_route_map# match ip address LT
+R3_config_route_map# set ip next-hop 23.23.23.2 13.13.13.1 //去往联通的流量默认走联通，电信线路为备份
+R3_config_route_map#!
+R3_config#route-map PBR 20 permit
+R3_config_route_map# match ip address DX
+R3_config_route_map# set ip next-hop 13.13.13.1 23.23.23.2     //出外网的其他流量默认走电信，联通线路为
+</code></pre>
+<p>备份线路实现</p>
+<pre><code>R3_config_route_map#!
+R3_config#ip nat inside source list ALL1 interface GigaEthernet0/4    //设置NAT
+R3_config#ip nat inside source list ALL2 interface GigaEthernet0/3    //设置NAT
+R3_config#
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[荒川地图欣赏]]></title>
+        <id>https://blog.ikozn.com//post/荒川图片收集</id>
+        <link href="https://blog.ikozn.com//post/荒川图片收集">
+        </link>
+        <updated>2017-02-06T07:28:09.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="利维坦港">利维坦港</h3>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/31/5abf4b7c512f4.jpg" alt="dMwE23QRBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="利维坦港">利维坦港</h3>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/31/5abf4b7c512f4.jpg" alt="dMwE23QRBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
+<!--more-->
+<h3 id="兰塔纳">兰塔纳</h3>
+<figure data-type="image" tabindex="2"><img src="https://img.ikozn.com/images/2017/02/07/dPffQ3QRBgAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dPffQ3QRBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
+<h3 id="江川">江川</h3>
+<figure data-type="image" tabindex="3"><img src="https://img.ikozn.com/images/2017/02/07/dOmZe3JPLAAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dOmZe3JPLAAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
+<figure data-type="image" tabindex="4"><img src="https://img.ikozn.com/images/2017/02/07/dENZQnQQBgAAbosARYAgAAAAABAMkrfviewer_4.jpg" alt="dENZQnQQBgAAbosARYAgAAAAABAMkrfviewer_4.jpg"></figure>
+<p></p>
+<h3 id="御水神社">御水神社</h3>
+<figure data-type="image" tabindex="5"><img src="https://img.ikozn.com/images/2017/02/07/dCB433QTBgAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dCB433QTBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
+<h3 id="特里普tulip">特里普(Tulip)</h3>
+<figure data-type="image" tabindex="6"><img src="https://img.ikozn.com/images/2017/02/07/dEY2fXJJLAAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dEY2fXJJLAAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
+<h3 id="索菲亚教堂">索菲亚教堂</h3>
+<figure data-type="image" tabindex="7"><img src="https://img.ikozn.com/images/2017/02/07/dEbcQHQRBgAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dEbcQHQRBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
+<figure data-type="image" tabindex="8"><img src="https://img.ikozn.com/images/2017/02/07/dHNLPHQQBgAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dHNLPHQQBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
+<h3 id="霜冠镇">霜冠镇</h3>
+<figure data-type="image" tabindex="9"><img src="https://img.ikozn.com/images/2017/02/07/dC2SD3OXKQAAbosARYAgAAAAABAMkrfviewer_4.jpg" alt="dC2SD3OXKQAAbosARYAgAAAAABAMkrfviewer_4.jpg"></figure>
+<h3 id="西陆岛">西陆岛</h3>
+<figure data-type="image" tabindex="10"><img src="https://img.ikozn.com/images/2017/02/07/dBYMenJFLAAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dBYMenJFLAAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
+<h3 id="千金镇">千金镇</h3>
+<figure data-type="image" tabindex="11"><img src="https://img.ikozn.com/images/2017/02/07/dAVe2XQRBgAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dAVe2XQRBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
+<h3 id="那些不知道名字的地方">那些不知道名字的地方</h3>
+<figure data-type="image" tabindex="12"><img src="https://img.ikozn.com/images/2017/02/07/dBwngHJMLAAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dBwngHJMLAAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
+<figure data-type="image" tabindex="13"><img src="https://img.ikozn.com/images/2017/02/07/dANu2XQPBgAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dANu2XQPBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
+<figure data-type="image" tabindex="14"><img src="https://img.ikozn.com/images/2017/02/07/dAdRQnQPBgAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dAdRQnQPBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
+<figure data-type="image" tabindex="15"><img src="https://img.ikozn.com/images/2017/02/07/dGBPq3MSBgAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dGBPq3MSBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
+<p>有些地名我也是不知道orz</p>
+<p>欢迎知道的小伙伴留言呐</p>
+<p>嘛,最后欢迎大家一起来服务器玩耍呀</p>
+<p>QQ群 : <a href="https://jq.qq.com/?_wv=1027&amp;k=44escuO">246109980</a></p>
+<p>论坛 ：<a href="https://mclll.com">mclll.com</a></p>
+]]></content>
     </entry>
 </feed>
