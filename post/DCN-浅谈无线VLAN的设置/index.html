@@ -1,0 +1,549 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>[DCN]浅谈无线VLAN的设置 | Hooyu&#39;s Note</title>
+<meta name="description" content="提灯照胆看江山">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico?v=1569172637679">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="http://localhost:4000/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="http://localhost:4000">
+        <img class="avatar" src="http://localhost:4000/images/avatar.png?v=1569172637679" alt="" width="32px" height="32px">
+      </a>
+      <a href="http://localhost:4000">
+        <h1 class="site-title">Hooyu&#39;s Note</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="http://localhost:4000/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="http://localhost:4000/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="http://localhost:4000/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="http://localhost:4000/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">[DCN]浅谈无线VLAN的设置</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2018-03-12</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="http://localhost:4000/tag/_Kz1iaYaah">
+                    WLAN
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="http://localhost:4000/tag/V5g_FuAyr_">
+                    无线
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="http://localhost:4000/tag/rEkuMBNIjl">
+                    神州数码
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="http://localhost:4000/tag/SA6_Hsrefy">
+                    DCN
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="http://localhost:4000/tag/j1B6RKT2qV">
+                    配置
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>首先我们来看一个常见的错误配置方式</p>
+<h3 id="拓扑"><strong>拓扑</strong></h3>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/12/5aa600e2bb5a2.png" alt="拓扑"></figure>
+<br />
+<br />
+<h3 id="需求"><strong>需求</strong></h3>
+<p>1.网络拓扑如上图所示，AC是无线控制器，其E1/0/1口连接着AP的LAN1口</p>
+<!--more-->
+<p>2.按照 表1-1 完成无线网络的配置.使用户连接WLAN使能够获取对应VLAN的IP地址。AP地址通过DHCP下发，为192.168.3.10。</p>
+<table>
+<thead>
+<tr>
+<th>VLAN</th>
+<th>SVI接口地址</th>
+<th>说明</th>
+<th>对应SSID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>192.168.1.254/24</td>
+<td>用户VLAN</td>
+<td>VLAN1-Wireless-LAB</td>
+</tr>
+<tr>
+<td>2</td>
+<td>192.168.2.254/24</td>
+<td>用户VLAN</td>
+<td>VLAN2-Wireless-LAB</td>
+</tr>
+<tr>
+<td>3</td>
+<td>192.168.3.254/24</td>
+<td>管理 and 用户VLAN</td>
+<td>VLAN3-Wireless-LAB</td>
+</tr>
+</tbody>
+</table>
+<center>表1-1</center>
+<h3 id="配置及实现"><strong>配置及实现</strong></h3>
+<h4 id="1ap上线">1.AP上线</h4>
+<br />
+<h4 id="划分vlan和设置svi接口地址">划分VLAN和设置SVI接口地址</h4>
+<pre><code>AC(config)#vlan 2		//创建VLAN2
+AC(config-vlan2)#vlan 3		//创建VLAN3
+AC(config-vlan3)#int vlan 1 	//进入Vlan1的SVI接口
+AC(config-if-vlan1)#ip ad 192.168.1.254 255.255.255.0		//设置IP地址	
+AC(config-if-vlan1)#int vlan 2		//进入VLAN2的SVI接口
+AC(config-if-vlan2)#ip ad 192.168.2.254 255.255.255.0		//设置IP地址
+AC(config-if-vlan2)#int vlan 3		//进入VLAN3的SVI接口
+AC(config-if-vlan3)#ip ad 192.168.3.254 255.255.255.0		//设置IP地址
+AC(config-if-ethernet1/0/1)#sw mo trunk 		//更改接口模式为Trunk
+AC(config-if-vlan3)#int e1/0/1
+AC(config-if-ethernet1/0/1)#sw mo trunk 
+AC(config-if-ethernet1/0/1)#switchport trunk native vlan 3		//设置Native VLAN为VLAN3
+</code></pre>
+<br />
+<br />
+<h4 id="2-开启dhcp功能自动下发地址">2 开启DHCP功能，自动下发地址。</h4>
+<pre><code>AC(config)#ip dhcp pool vlan1 		//创建地址池
+AC(dhcp-vlan1-config)#network-address 192.168.1.0 255.255.255.0		//设置下发网段
+AC(dhcp-vlan1-config)#default-router 192.168.1.254		
+AC(dhcp-vlan1-config)#!
+AC(config)#ip dhcp pool vlan2		//创建地址池
+AC(dhcp-vlan2-config)#network-address 192.168.2.0 255.255.255.0		//设置下发网段
+AC(dhcp-vlan2-config)#default-router 192.168.2.254 		//设置网关
+AC(dhcp-vlan2-config)#!
+AC(config)#ip dhcp pool vlan3       //创建地址池                
+AC(dhcp-vlan3-config)#network-address 192.168.3.0 255.255.255.0		//设置下发网段
+AC(dhcp-vlan3-config)#default-router 192.168.3.254		//设置网关
+AC(dhcp-vlan3-config)#!
+AC(config)#service dhcp		//开启DHCP服务
+</code></pre>
+<br />
+<br />
+<h4 id="3-dhcp静态绑定ap地址">3 DHCP静态绑定AP地址</h4>
+<p><strong>AC</strong></p>
+<pre><code>AC(config)#show ip dh binding 		//查看DHCP绑定
+Total dhcp binding items: 1, the matched: 1
+IP address          Hardware address         Lease expiration         Type
+192.168.3.1         00-03-0F-5B-F0-E0        Mon Jan 02 00:30:00 2006 Dynamic
+
+AC(config)#ip dhcp pool AP		//添加DHCP池
+AC(dhcp-ap-config)#hardware-address 00-03-0F-5B-F0-E0		//绑定MAC地址
+AC(dhcp-ap-config)#host 192.168.3.10		//绑定IP
+AC(dhcp-ap-config)#default-router 192.168.3.254		//设置网关
+AC(dhcp-ap-config)#!
+AC(config)#show ip dh binding                
+Total dhcp binding items: 1, the matched: 1
+IP address          Hardware address         Lease expiration         Type
+192.168.3.10        00-03-0F-5B-F0-E0        Infinite                 Manual
+</code></pre>
+<br />
+<br />
+<p><strong>AP</strong></p>
+<p>重启的DHCP功能</p>
+<pre><code>AP# set management dhcp-status down	//关闭DHCP获取地址
+AP# set management dhcp-status up  	//开启DHCP获取地址
+AP# get management 
+Property                   Value
+--------------------------------------------
+vlan-id                    1
+interface                  brvlan1
+static-ip                  192.168.1.10
+static-mask                255.255.255.0
+ip                         192.168.3.10		//获取到了192.168.3.10
+mask                       255.255.255.0
+ipv6                       
+ipv6-prefix-length         0
+mac                        00:03:0F:5B:F0:E0
+dhcp-status                up
+dhcpv6-status              down
+ipv6-status                up
+ipv6-autoconfig-status     up
+static-ipv6                
+static-ipv6-prefix-length  0
+</code></pre>
+<br />
+<br />
+<h4 id="4-开启ac无线功能">4 开启AC无线功能</h4>
+<pre><code>AC(config-wireless)#no auto-ip-assign 		//关闭无线地址选举
+AC(config-wireless)#static-ip 192.168.3.254		//设置静态无线地址
+AC(config-wireless)#discovery vlan-list 3		//设置二层发现VLAN
+AC(config-wireless)#ap authentication none 		//关闭AP验证
+AC(config-wireless)#enable 		//开启无线功能
+查看AP状态
+AC(config)#show wir ap status 
+
+    MAC Address                                                            Configuration                
+ (*) Peer Managed  IP Address                              Profile Status     Status           Age      
+------------------ --------------------------------------- ------- ------- ------------- --------------
+ 00-03-0f-5b-f0-e0 192.168.3.10                            1       Managed Failure       0d:00:00:07
+
+Total Access Points............................ 1
+</code></pre>
+<br />
+<br />
+<h4 id="5-无线配置">5 无线配置</h4>
+<pre><code>AC(config)#wireless 		//进入无线全局模式
+AC(config-wireless)#network 1		//进入network配置模式
+AC(config-network)#ssid VLAN1-Wireless-LAB		//设置SSID
+AC(config-network)#security mode none 	//关闭用户认证
+AC(config-network)#vlan 1		//设置VLAN
+AC(config-network)#network 2		//进入network配置模式
+AC(config-network)#ssid VLAN2-Wireless-LAB
+AC(config-network)#security mode none 		//关闭用户认证
+AC(config-network)#vlan 2		//设置VLAN
+AC(config-network)#network 3		//进入network配置模式
+AC(config-network)#ssid VLAN3-Wireless-LAB
+AC(config-network)#security mode none 		//关闭用户认证
+AC(config-network)#vlan 3		//设置VLAN
+AC(config-network)#!
+AC(config-wireless)#ap profile 1		//进入profile 1
+AC(config-ap-profile)#hwtype 29		//设置硬件号
+AC(config-ap-profile)#radio 1		//进入radio配置模式
+AC(config-ap-profile-radio)#vap 1		//进入vap配置模式
+AC(config-ap-profile-vap)#enable 		//开启vap
+AC(config-ap-profile-vap)#vap 2		//进入VAP配置模式
+AC(config-ap-profile-vap)#enable 	//开启VAP
+AC(config-ap-profile-vap)#!
+AC(config-ap-profile-radio)#!
+AC(config-ap-profile)#!
+AC(config-wireless)#!
+AC(config)#!
+AC(config)#exit
+AC#wir ap prof ap 1		//下发配置文件
+All configurations will be send to the aps associated to this profile and associated clients on these aps will be disconnected. Are you sure you want to apply the profile configuration? [Y/N] y
+</code></pre>
+<hr>
+<h4 id="6测试">6.测试</h4>
+<p>配置文件下发之后，稍等一会，就可以搜索到无线信号了。</p>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2018/03/12/5aa57b1fe9738.png" alt="WIFI列表"></figure>
+<p>接着我们连上去试试</p>
+<p>首先我们连接VLAN1的</p>
+<p>结果发现</p>
+<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2018/03/12/5aa57c1f5f96d.png" alt="VLAN1连接"></figure>
+<center>竟然获取到了VLAN3的地址</center>
+<br />
+<center>接下来我们再连接VLAN2的试试</center>
+<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2018/03/12/5aa57c1f5f96d.png" alt="VLAN2连接"></figure>
+<center>发现是正常的</center>
+<br />
+<center>最后再来连接VLAN3</center>
+<figure data-type="image" tabindex="5"><img src="https://i.loli.net/2018/03/12/5aa58ea17ceb9.png" alt="VLAN3连接"></figure>
+<center>发现根本获取不到IP地址</center>
+<h3 id="问题分析">问题分析</h3>
+<h4 id="1拓扑">1.拓扑</h4>
+<figure data-type="image" tabindex="6"><img src="https://i.loli.net/2018/03/12/5aa600e2bb5a2.png" alt="拓扑"></figure>
+<br />
+<br />
+<h4 id="2vlan-1-用户上线过程">2.VLAN 1 用户上线过程</h4>
+<figure data-type="image" tabindex="7"><img src="https://i.loli.net/2018/03/12/5aa600abe2514.png" alt="VLAN DHCP过程"></figure>
+<p>**(1).**当用户连接到无线网络之后，客户端发送<code>DHCP DISCOVER</code>广播包来请求IP地址</p>
+<p>**(2).**AP默认的转发方式为本地转发，所以<code>DHCP DISCOVER</code>报文到达AP之后802.11帧便被转换成以太网帧。不打VLAN TAG，将数据包转发给交换机。</p>
+<p>**(3).**我们在交换机的E1/0/1接口上配置了命令 <code>switchport trunk native vlan 3</code>,所以当没有VLAN Tag的帧到达交换机的时候，被打上VLAN 3的标签.</p>
+<p>**(4).**所以最后导致了Client获取到了VLAN3网段的地址</p>
+<blockquote>
+<p>VLAN1的数据AP不打标签</p>
+</blockquote>
+<br />
+<br />
+<h4 id="3vlan-2-用户上线过程">3.VLAN 2 用户上线过程</h4>
+<figure data-type="image" tabindex="8"><img src="https://i.loli.net/2018/03/12/5aa601ee7c5d5.png" alt="VLAN2上线"></figure>
+<p>**(1).**当用户连接到无线网络之后，客户端发送<code>DHCP DISCOVER</code>广播包来请求IP地址</p>
+<p>**(2).**AP默认的转发方式为本地转发，所以<code>DHCP DISCOVER</code>报文到达AP之后802.11帧便被转换成以太网帧。</p>
+<p>打上<code>VLAN 2</code> TAG，将数据包转发给交换机。</p>
+<p>**(3).**交换机收到该帧，不对帧进行任何处理，直接放行，最后帧在VLAN2内传播。</p>
+<p>**(4).**所以客户机可以获取到正确的地址。</p>
+<br />
+<br />
+<h4 id="4vlan-3-用户上线过程">4.VLAN 3 用户上线过程</h4>
+<figure data-type="image" tabindex="9"><img src="https://i.loli.net/2018/03/12/5aa60313a8a84.png" alt="VLAN3上线"></figure>
+<p>**(1).**当用户连接到无线网络之后，客户端发送<code>DHCP DISCOVER</code>广播包来请求IP地址</p>
+<p>**(2).**AP默认的转发方式为本地转发，所以<code>DHCP DISCOVER</code>报文到达AP之后802.11帧便被转换成以太网帧。</p>
+<p>**(3).**打上<code>VLAN 3</code> TAG，将数据包转发给交换机，然而交换机上配置了<code>switchport trunk native vlan 3</code>，导致交换机丢包，该SSID下所有数据都不能通过交换机，所以最终也不能获取地址。</p>
+<br />
+<br />
+<hr>
+<h3 id="解决问题">解决问题</h3>
+<p>让我们重新做一遍</p>
+<h4 id="1设置vlan">1.设置VLAN</h4>
+<pre><code>AC(config)#vlan 2		//创建VLAN2
+AC(config-vlan2)#vlan 3		//创建VLAN3
+AC(config-vlan3)#int vlan 1 	//进入Vlan1的SVI接口
+AC(config-if-vlan1)#ip ad 192.168.1.254 255.255.255.0		//设置IP地址	
+AC(config-if-vlan1)#int vlan 2		//进入VLAN2的SVI接口
+AC(config-if-vlan2)#ip ad 192.168.2.254 255.255.255.0		//设置IP地址
+AC(config-if-vlan2)#int vlan 3		//进入VLAN3的SVI接口
+AC(config-if-vlan3)#ip ad 192.168.3.254 255.255.255.0		//设置IP地址
+AC(config-if-vlan3)#int e1/0/1
+AC(config-if-ethernet1/0/1)#sw mo trunk 		//更改接口模式为Trunk
+</code></pre>
+<p><strong>注意，这里不设置Native VLAN</strong></p>
+<br />
+<br />
+<h4 id="2设置dhcp">2.设置DHCP</h4>
+<p><strong>AP</strong></p>
+<p>设置管理VLAN</p>
+<pre><code>AP# set management vlan-id 3	//设置管理VLAN为VLAN3
+</code></pre>
+<blockquote>
+<p>设置管理VLAN之后，从AP发出的管理/控制报文都会打上VLAN 3的TAG，也可以接受带VLAN3 TAG的管理报文。</p>
+</blockquote>
+<br />
+<br />
+<p><strong>AC</strong></p>
+<pre><code>AC(config)#ip dh pool VLAN1
+AC(dhcp-vlan1-config)#network-address 192.168.1.0 255.255.255.0
+AC(dhcp-vlan1-config)#default-router 192.168.1.254
+AC(dhcp-vlan1-config)#!                    
+AC(config)#ip dh pool VLAN2
+AC(dhcp-vlan2-config)#network-address 192.168.2.0 255.255.255.0
+AC(dhcp-vlan2-config)#default-router 192.168.2.254
+AC(dhcp-vlan2-config)#!
+AC(config)#ip dh pool VLAN3
+AC(dhcp-vlan3-config)#network-address 192.168.3.0 255.255.255.0
+AC(dhcp-vlan3-config)#default-router 192.168.3.254
+AC(dhcp-vlan3-config)#!
+AC(config)#service dhcp
+</code></pre>
+<br />
+<br />
+<h4 id="3静态绑定dhcp">3.静态绑定DHCP</h4>
+<p><strong>AC</strong></p>
+<pre><code>AC(config)#show ip dh binding 
+Total dhcp binding items: 1, the matched: 1
+IP address          Hardware address         Lease expiration         Type
+192.168.3.1         aa-aa-aa-aa-aa-aa        Mon Jan 02 00:12:00 2006 Dynamic
+AC(config)#ip dhcp pool AP
+AC(dhcp-ap-config)#hardware-address aa-aa-aa-aa-aa-aa
+AC(dhcp-ap-config)#host 192.168.3.10
+AC(dhcp-ap-config)#default-router 192.168.3.254
+AC(dhcp-ap-config)#!
+</code></pre>
+<br />
+<p><strong>AP</strong></p>
+<pre><code>AP# set management dhcp-status down
+AP# set management dhcp-status up  
+</code></pre>
+<br />
+<br />
+<h4 id="4开启无线功能">4.开启无线功能</h4>
+<pre><code>AC(config-wireless)#no auto-ip-assign 
+AC(config-wireless)#static-ip 192.168.3.254
+AC(config-wireless)#ap authe none 
+AC(config-wireless)#discovery vlan-list 3
+AC(config-wireless)#enable 
+</code></pre>
+<br />
+<br />
+<h4 id="5配置无线">5.配置无线</h4>
+<pre><code>AC(config-wireless)#network 1
+AC(config-network)#ssid VLAN1-Wireless-LAB
+AC(config-network)#vlan 1
+AC(config-network)#network 2
+AC(config-network)#ssid VLAN2-Wireless-LAB
+AC(config-network)#vlan 2
+AC(config-network)#network 3
+AC(config-network)#ssid VLAN3-Wireless-LAB
+AC(config-network)#vlan 3
+AC(config-network)#!
+AC(config-wireless)#ap profile 1
+AC(config-ap-profile)#hwtype 29
+AC(config-ap-profile)#management vlan 3
+AC(config-ap-profile)#radio 1
+AC(config-ap-profile-radio)#vap 1
+AC(config-ap-profile-vap)#enable 
+AC(config-ap-profile-vap)#vap 2
+AC(config-ap-profile-vap)#enable 
+AC(config-ap-profile-vap)#!
+AC(config-ap-profile-radio)#!
+AC(config-ap-profile)#!
+AC#wireless ap prof ap 1
+All configurations will be send to the aps associated to this profile and associated clients on these aps will be disconnected. Are you sure you want to apply the profile configuration? [Y/N] y
+AP Profile apply is in progress.
+</code></pre>
+<br />
+<br />
+<h4 id="6测试-2">6.测试</h4>
+<p><strong>VLAN1</strong></p>
+<figure data-type="image" tabindex="10"><img src="https://i.loli.net/2018/03/12/5aa60f0615b3b.png" alt="VLAN1"></figure>
+<br />
+<br />
+<p><strong>VLAN2</strong></p>
+<figure data-type="image" tabindex="11"><img src="https://i.loli.net/2018/03/12/5aa60f8f5b204.png" alt="VLAN2"></figure>
+<p><strong>VLAN3</strong></p>
+<figure data-type="image" tabindex="12"><img src="https://i.loli.net/2018/03/12/5aa61045a552d.png" alt="VLAN3"></figure>
+<p>可以发现，这次一切都正常了。</p>
+<hr>
+<h3 id="失误发生的原因">失误发生的原因</h3>
+<p>这个配置错误出现的原因主要有以下两点:</p>
+<p>**1.**对<code>network</code>配置模型下<code>vlan</code>的命令有所误解</p>
+<p>这个命令是设置VLAN表示，设置无线用户的数据在经过AP之后应打上的VLAN TAG，而不是说这个无线信号数据是哪个VLAN，就设置成哪个VLAN。</p>
+<br />
+<br />
+<p>**2.**无线管理VLAN的设置</p>
+<p>一般来说，我们设置管理VLAN的时候都是将接口设置为Trunk，并更改接口的本征VLAN.大多数情况下这样子是没有问题的.但是当管理VLAN和用户VLAN是同一个，并且不是VLAN1的时候，情况就有些尴尬.</p>
+<p>如上面的第一个实验，当管理和用户VLAN都是VLAN3的时候，我们一般都是这么设置的:</p>
+<pre><code>AC(config-if-vlan3)#int e1/0/1
+AC(config-if-ethernet1/0/1)#sw mo trunk 
+AC(config-if-ethernet1/0/1)#switchport trunk native vlan 3		//设置Native VLAN为VLAN3
+</code></pre>
+<p><em><strong>更改接口的本征VLAN</strong></em></p>
+<br />
+<br />
+<pre><code>AC(config-network)#network 3		//进入network配置模式
+AC(config-network)#ssid VLAN3-Wireless-LAB
+AC(config-network)#security mode none 		//关闭用户认证
+AC(config-network)#vlan 3		//设置VLAN
+</code></pre>
+<p><em><strong>在Network下设置VLAN标识</strong></em></p>
+<p>如果这么设置，AP转发连接到Network 3的用户流量的时候，就会打上VLAN 3的TAG并发送出去，然而我们的AC接口也将接口的本征VLAN修改为了VLAN3。一但AC收到AP发来带有VLAN 3 TAG的数据帧时，就会将帧丢弃，这就这就导致了我们连上了Network 3却无法访问网络.</p>
+<br />
+<br />
+<p>解决方法有两种</p>
+<p>**1.**将network中的vlan标识改回vlan1</p>
+<p>如此，当AP转发Network的流量时，就不会打上VLAN TAG，AC接收到数据帧之后，会根据本征VLAN打上VLAN TAG，然后在AC中进行转发。</p>
+<p>此方法的代价就是VLAN1不能用来转发无线流量(不能当做用户VLAN).</p>
+<br />
+<p>**2.**请看[解决问题]篇</p>
+<h3 id="总结">总结</h3>
+<p>当你的管理VLAN与用户VLAN是同一个VLAN且不是VLAN1的时候，要么放弃使用VLAN1转发数据。</p>
+<p>要么在AP上设置管理VLAN.</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="http://localhost:4000/post/无线常用配置">
+              <h3 class="post-title">
+                下一篇：[DCN]神州数码无线常用配置
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">提灯照胆看江山</div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/ikozn" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="http://localhost:4000/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
