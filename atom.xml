@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.ikozn.com</id>
     <title>Hooyu&apos;s Note</title>
-    <updated>2019-09-22T17:46:12.040Z</updated>
+    <updated>2019-09-23T00:14:55.021Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.ikozn.com"/>
     <link rel="self" href="https://blog.ikozn.com/atom.xml"/>
@@ -16,11 +16,18 @@
         <link href="https://blog.ikozn.com/post/序">
         </link>
         <updated>2019-05-02T18:06:54.000Z</updated>
+        <summary type="html"><![CDATA[<p>欢迎你，陌生人<br>
+不知不觉又咕咕咕了一年的博客，也不全因为太忙，只是自己的确没有多少的兴趣来写博客。<br>
+现在读了大学，学的东西多而杂，同时也对未来有了一些期待，决定重新启用博客，自己一个人悄悄的写一写东西。</p>
+<p>最后，</p>
+<p><strong>欢迎你来到这里</strong>。</p>
+]]></summary>
         <content type="html"><![CDATA[<p>欢迎你，陌生人<br>
 不知不觉又咕咕咕了一年的博客，也不全因为太忙，只是自己的确没有多少的兴趣来写博客。<br>
 现在读了大学，学的东西多而杂，同时也对未来有了一些期待，决定重新启用博客，自己一个人悄悄的写一写东西。</p>
 <p>最后，</p>
 <p><strong>欢迎你来到这里</strong>。</p>
+<!-- more -->
 ]]></content>
     </entry>
     <entry>
