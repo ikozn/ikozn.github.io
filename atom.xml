@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.ikozn.com</id>
     <title>Hooyu&apos;s Note</title>
-    <updated>2019-09-23T06:25:33.393Z</updated>
+    <updated>2019-09-23T06:44:15.329Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.ikozn.com"/>
     <link rel="self" href="https://blog.ikozn.com/atom.xml"/>
@@ -1335,46 +1335,16 @@ R3_config#
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[荒川地图欣赏]]></title>
-        <id>https://blog.ikozn.com/post/荒川图片收集</id>
-        <link href="https://blog.ikozn.com/post/荒川图片收集">
+        <title type="html"><![CDATA[ NAYO图库部署完成]]></title>
+        <id>https://blog.ikozn.com/post/NAYO图库部署完成</id>
+        <link href="https://blog.ikozn.com/post/NAYO图库部署完成">
         </link>
-        <updated>2017-02-06T07:28:09.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="利维坦港">利维坦港</h3>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/31/5abf4b7c512f4.jpg" alt="dMwE23QRBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
+        <updated>2017-02-05T11:57:20.000Z</updated>
+        <summary type="html"><![CDATA[<p>~~戳<a href="https://img.nayo.moe">这里</a>访问(๑•̀.̫•́๑)~~Nayo已死，现迁移至新<a href="https://img.ikozn.com">地址</a></p>
 ]]></summary>
-        <content type="html"><![CDATA[<h3 id="利维坦港">利维坦港</h3>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/31/5abf4b7c512f4.jpg" alt="dMwE23QRBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
+        <content type="html"><![CDATA[<p>~~戳<a href="https://img.nayo.moe">这里</a>访问(๑•̀.̫•́๑)~~Nayo已死，现迁移至新<a href="https://img.ikozn.com">地址</a></p>
 <!--more-->
-<h3 id="兰塔纳">兰塔纳</h3>
-<figure data-type="image" tabindex="2"><img src="https://img.ikozn.com/images/2017/02/07/dPffQ3QRBgAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dPffQ3QRBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
-<h3 id="江川">江川</h3>
-<figure data-type="image" tabindex="3"><img src="https://img.ikozn.com/images/2017/02/07/dOmZe3JPLAAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dOmZe3JPLAAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
-<figure data-type="image" tabindex="4"><img src="https://img.ikozn.com/images/2017/02/07/dENZQnQQBgAAbosARYAgAAAAABAMkrfviewer_4.jpg" alt="dENZQnQQBgAAbosARYAgAAAAABAMkrfviewer_4.jpg"></figure>
-<p></p>
-<h3 id="御水神社">御水神社</h3>
-<figure data-type="image" tabindex="5"><img src="https://img.ikozn.com/images/2017/02/07/dCB433QTBgAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dCB433QTBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
-<h3 id="特里普tulip">特里普(Tulip)</h3>
-<figure data-type="image" tabindex="6"><img src="https://img.ikozn.com/images/2017/02/07/dEY2fXJJLAAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dEY2fXJJLAAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
-<h3 id="索菲亚教堂">索菲亚教堂</h3>
-<figure data-type="image" tabindex="7"><img src="https://img.ikozn.com/images/2017/02/07/dEbcQHQRBgAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dEbcQHQRBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
-<figure data-type="image" tabindex="8"><img src="https://img.ikozn.com/images/2017/02/07/dHNLPHQQBgAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dHNLPHQQBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
-<h3 id="霜冠镇">霜冠镇</h3>
-<figure data-type="image" tabindex="9"><img src="https://img.ikozn.com/images/2017/02/07/dC2SD3OXKQAAbosARYAgAAAAABAMkrfviewer_4.jpg" alt="dC2SD3OXKQAAbosARYAgAAAAABAMkrfviewer_4.jpg"></figure>
-<h3 id="西陆岛">西陆岛</h3>
-<figure data-type="image" tabindex="10"><img src="https://img.ikozn.com/images/2017/02/07/dBYMenJFLAAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dBYMenJFLAAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
-<h3 id="千金镇">千金镇</h3>
-<figure data-type="image" tabindex="11"><img src="https://img.ikozn.com/images/2017/02/07/dAVe2XQRBgAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dAVe2XQRBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
-<h3 id="那些不知道名字的地方">那些不知道名字的地方</h3>
-<figure data-type="image" tabindex="12"><img src="https://img.ikozn.com/images/2017/02/07/dBwngHJMLAAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dBwngHJMLAAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
-<figure data-type="image" tabindex="13"><img src="https://img.ikozn.com/images/2017/02/07/dANu2XQPBgAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dANu2XQPBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
-<figure data-type="image" tabindex="14"><img src="https://img.ikozn.com/images/2017/02/07/dAdRQnQPBgAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dAdRQnQPBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
-<figure data-type="image" tabindex="15"><img src="https://img.ikozn.com/images/2017/02/07/dGBPq3MSBgAAboAAWAAgAAAAABAKArfviewer_4.jpg" alt="dGBPq3MSBgAAboAAWAAgAAAAABAKArfviewer_4.jpg"></figure>
-<p>有些地名我也是不知道orz</p>
-<p>欢迎知道的小伙伴留言呐</p>
-<p>嘛,最后欢迎大家一起来服务器玩耍呀</p>
-<p>QQ群 : <a href="https://jq.qq.com/?_wv=1027&amp;k=44escuO">246109980</a></p>
-<p>论坛 ：<a href="https://mclll.com">mclll.com</a></p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/31/5abf7361d0016.jpg" alt="Miv4t"></figure>
 ]]></content>
     </entry>
 </feed>
