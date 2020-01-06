@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.ikozn.com</id>
     <title>Hooyu&apos;s Note</title>
-    <updated>2020-01-06T19:21:42.504Z</updated>
+    <updated>2020-01-06T19:23:33.523Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.ikozn.com"/>
     <link rel="self" href="https://blog.ikozn.com/atom.xml"/>
@@ -10,15 +10,6 @@
     <logo>https://blog.ikozn.com/images/avatar.png</logo>
     <icon>https://blog.ikozn.com/favicon.ico</icon>
     <rights>All rights reserved 2020, Hooyu&apos;s Note</rights>
-    <entry>
-        <title type="html"><![CDATA[测试]]></title>
-        <id>https://blog.ikozn.com/post/ce-shi</id>
-        <link href="https://blog.ikozn.com/post/ce-shi">
-        </link>
-        <updated>2020-01-06T19:21:12.000Z</updated>
-        <content type="html"><![CDATA[<p>测试</p>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[序 / INTRO]]></title>
         <id>https://blog.ikozn.com/post/序</id>
@@ -1328,6 +1319,19 @@ R3_config#ip nat inside source list ALL1 interface GigaEthernet0/4    //设置NA
 R3_config#ip nat inside source list ALL2 interface GigaEthernet0/3    //设置NAT
 R3_config#
 </code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ NAYO图库部署完成]]></title>
+        <id>https://blog.ikozn.com/post/NAYO图库部署完成</id>
+        <link href="https://blog.ikozn.com/post/NAYO图库部署完成">
+        </link>
+        <updated>2017-02-05T11:57:20.000Z</updated>
+        <summary type="html"><![CDATA[<p>~~戳<a href="https://img.nayo.moe">这里</a>访问(๑•̀.̫•́๑)~~Nayo已死，现迁移至新<a href="https://img.ikozn.com">地址</a></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>~~戳<a href="https://img.nayo.moe">这里</a>访问(๑•̀.̫•́๑)~~Nayo已死，现迁移至新<a href="https://img.ikozn.com">地址</a></p>
+<!--more-->
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/31/5abf7361d0016.jpg" alt="Miv4t" loading="lazy"></figure>
 ]]></content>
     </entry>
 </feed>
