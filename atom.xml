@@ -2,14 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.ikozn.com</id>
     <title>Hooyu&apos;s Note</title>
-    <updated>2019-09-28T02:05:50.117Z</updated>
+    <updated>2020-01-06T19:21:42.504Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.ikozn.com"/>
     <link rel="self" href="https://blog.ikozn.com/atom.xml"/>
     <subtitle>🗻提灯照胆看江山</subtitle>
     <logo>https://blog.ikozn.com/images/avatar.png</logo>
     <icon>https://blog.ikozn.com/favicon.ico</icon>
-    <rights>All rights reserved 2019, Hooyu&apos;s Note</rights>
+    <rights>All rights reserved 2020, Hooyu&apos;s Note</rights>
+    <entry>
+        <title type="html"><![CDATA[测试]]></title>
+        <id>https://blog.ikozn.com/post/ce-shi</id>
+        <link href="https://blog.ikozn.com/post/ce-shi">
+        </link>
+        <updated>2020-01-06T19:21:12.000Z</updated>
+        <content type="html"><![CDATA[<p>测试</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[序 / INTRO]]></title>
         <id>https://blog.ikozn.com/post/序</id>
@@ -37,7 +46,7 @@
         </link>
         <updated>2018-03-27T16:40:55.000Z</updated>
         <content type="html"><![CDATA[<!--more-->
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/28/5aba743212c12.jpg" alt="Google"></figure>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/28/5aba743212c12.jpg" alt="Google" loading="lazy"></figure>
 <blockquote>
 <p>账号与密码都是上图中第一个字母小写,点<a href="https://g.ikozn.com">这里</a>访问</p>
 </blockquote>
@@ -52,7 +61,7 @@
         <content type="html"><![CDATA[<!--more-->
 <p>首先我们来看一个常见的错误配置方式</p>
 <h3 id="拓扑"><strong>拓扑</strong></h3>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/12/5aa600e2bb5a2.png" alt="拓扑"></figure>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/12/5aa600e2bb5a2.png" alt="拓扑" loading="lazy"></figure>
 <br />
 <br />
 <h3 id="需求"><strong>需求</strong></h3>
@@ -221,27 +230,27 @@ All configurations will be send to the aps associated to this profile and associ
 <hr>
 <h4 id="6测试">6.测试</h4>
 <p>配置文件下发之后，稍等一会，就可以搜索到无线信号了。</p>
-<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2018/03/12/5aa57b1fe9738.png" alt="WIFI列表"></figure>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2018/03/12/5aa57b1fe9738.png" alt="WIFI列表" loading="lazy"></figure>
 <p>接着我们连上去试试</p>
 <p>首先我们连接VLAN1的</p>
 <p>结果发现</p>
-<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2018/03/12/5aa57c1f5f96d.png" alt="VLAN1连接"></figure>
+<figure data-type="image" tabindex="3"><img src="https://i.loli.net/2018/03/12/5aa57c1f5f96d.png" alt="VLAN1连接" loading="lazy"></figure>
 <center>竟然获取到了VLAN3的地址</center>
 <br />
 <center>接下来我们再连接VLAN2的试试</center>
-<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2018/03/12/5aa57c1f5f96d.png" alt="VLAN2连接"></figure>
+<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2018/03/12/5aa57c1f5f96d.png" alt="VLAN2连接" loading="lazy"></figure>
 <center>发现是正常的</center>
 <br />
 <center>最后再来连接VLAN3</center>
-<figure data-type="image" tabindex="5"><img src="https://i.loli.net/2018/03/12/5aa58ea17ceb9.png" alt="VLAN3连接"></figure>
+<figure data-type="image" tabindex="5"><img src="https://i.loli.net/2018/03/12/5aa58ea17ceb9.png" alt="VLAN3连接" loading="lazy"></figure>
 <center>发现根本获取不到IP地址</center>
 <h3 id="问题分析">问题分析</h3>
 <h4 id="1拓扑">1.拓扑</h4>
-<figure data-type="image" tabindex="6"><img src="https://i.loli.net/2018/03/12/5aa600e2bb5a2.png" alt="拓扑"></figure>
+<figure data-type="image" tabindex="6"><img src="https://i.loli.net/2018/03/12/5aa600e2bb5a2.png" alt="拓扑" loading="lazy"></figure>
 <br />
 <br />
 <h4 id="2vlan-1-用户上线过程">2.VLAN 1 用户上线过程</h4>
-<figure data-type="image" tabindex="7"><img src="https://i.loli.net/2018/03/12/5aa600abe2514.png" alt="VLAN DHCP过程"></figure>
+<figure data-type="image" tabindex="7"><img src="https://i.loli.net/2018/03/12/5aa600abe2514.png" alt="VLAN DHCP过程" loading="lazy"></figure>
 <p>**(1).**当用户连接到无线网络之后，客户端发送<code>DHCP DISCOVER</code>广播包来请求IP地址</p>
 <p>**(2).**AP默认的转发方式为本地转发，所以<code>DHCP DISCOVER</code>报文到达AP之后802.11帧便被转换成以太网帧。不打VLAN TAG，将数据包转发给交换机。</p>
 <p>**(3).**我们在交换机的E1/0/1接口上配置了命令 <code>switchport trunk native vlan 3</code>,所以当没有VLAN Tag的帧到达交换机的时候，被打上VLAN 3的标签.</p>
@@ -252,7 +261,7 @@ All configurations will be send to the aps associated to this profile and associ
 <br />
 <br />
 <h4 id="3vlan-2-用户上线过程">3.VLAN 2 用户上线过程</h4>
-<figure data-type="image" tabindex="8"><img src="https://i.loli.net/2018/03/12/5aa601ee7c5d5.png" alt="VLAN2上线"></figure>
+<figure data-type="image" tabindex="8"><img src="https://i.loli.net/2018/03/12/5aa601ee7c5d5.png" alt="VLAN2上线" loading="lazy"></figure>
 <p>**(1).**当用户连接到无线网络之后，客户端发送<code>DHCP DISCOVER</code>广播包来请求IP地址</p>
 <p>**(2).**AP默认的转发方式为本地转发，所以<code>DHCP DISCOVER</code>报文到达AP之后802.11帧便被转换成以太网帧。</p>
 <p>打上<code>VLAN 2</code> TAG，将数据包转发给交换机。</p>
@@ -261,7 +270,7 @@ All configurations will be send to the aps associated to this profile and associ
 <br />
 <br />
 <h4 id="4vlan-3-用户上线过程">4.VLAN 3 用户上线过程</h4>
-<figure data-type="image" tabindex="9"><img src="https://i.loli.net/2018/03/12/5aa60313a8a84.png" alt="VLAN3上线"></figure>
+<figure data-type="image" tabindex="9"><img src="https://i.loli.net/2018/03/12/5aa60313a8a84.png" alt="VLAN3上线" loading="lazy"></figure>
 <p>**(1).**当用户连接到无线网络之后，客户端发送<code>DHCP DISCOVER</code>广播包来请求IP地址</p>
 <p>**(2).**AP默认的转发方式为本地转发，所以<code>DHCP DISCOVER</code>报文到达AP之后802.11帧便被转换成以太网帧。</p>
 <p>**(3).**打上<code>VLAN 3</code> TAG，将数据包转发给交换机，然而交换机上配置了<code>switchport trunk native vlan 3</code>，导致交换机丢包，该SSID下所有数据都不能通过交换机，所以最终也不能获取地址。</p>
@@ -370,13 +379,13 @@ AP Profile apply is in progress.
 <br />
 <h4 id="6测试-2">6.测试</h4>
 <p><strong>VLAN1</strong></p>
-<figure data-type="image" tabindex="10"><img src="https://i.loli.net/2018/03/12/5aa60f0615b3b.png" alt="VLAN1"></figure>
+<figure data-type="image" tabindex="10"><img src="https://i.loli.net/2018/03/12/5aa60f0615b3b.png" alt="VLAN1" loading="lazy"></figure>
 <br />
 <br />
 <p><strong>VLAN2</strong></p>
-<figure data-type="image" tabindex="11"><img src="https://i.loli.net/2018/03/12/5aa60f8f5b204.png" alt="VLAN2"></figure>
+<figure data-type="image" tabindex="11"><img src="https://i.loli.net/2018/03/12/5aa60f8f5b204.png" alt="VLAN2" loading="lazy"></figure>
 <p><strong>VLAN3</strong></p>
-<figure data-type="image" tabindex="12"><img src="https://i.loli.net/2018/03/12/5aa61045a552d.png" alt="VLAN3"></figure>
+<figure data-type="image" tabindex="12"><img src="https://i.loli.net/2018/03/12/5aa61045a552d.png" alt="VLAN3" loading="lazy"></figure>
 <p>可以发现，这次一切都正常了。</p>
 <hr>
 <h3 id="失误发生的原因">失误发生的原因</h3>
@@ -816,7 +825,7 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
 </code></pre>
 <hr>
 <h3 id="配置原则关系图解">配置原则关系图解</h3>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/11/5aa536dc8b2bb.png" alt="无线配置原则"></figure>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/11/5aa536dc8b2bb.png" alt="无线配置原则" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
@@ -835,7 +844,7 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
 <p>在经过一段时间的忙碌之后，终于有空闲的时间来修复了，在这里给大家说一声抱歉。</p>
 <p>不过，这都不重要！重要的是我终于回来了！并且还做了一些微小的改动。</p>
 <!--more-->
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/31/5abf6be5c37d6.png" alt="骄傲"></figure>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/31/5abf6be5c37d6.png" alt="骄傲" loading="lazy"></figure>
 <h3 id="域名">域名</h3>
 <p>由于之前的域名被墙了，所以把 <code>nayo.moe</code> 换成了 <code>ikozn.com</code>。</p>
 <h3 id="博客程序">博客程序</h3>
@@ -843,8 +852,8 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
 <p>这次迁移之后，加上了<a href="http://www.google.com/analytics/">Google Analytics </a>的网站统计服务。</p>
 <p>但是这都 <strong>不! 重! 要!</strong></p>
 <p>最最最最最重要的是，这个可爱的看板娘！！！</p>
-<figure data-type="image" tabindex="2"><img src="https://img.ikozn.com/images/AbMa.png" alt="看板娘"></figure>
-<figure data-type="image" tabindex="3"><img src="https://img.ikozn.com/images/AmJ2.jpg" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="https://img.ikozn.com/images/AbMa.png" alt="看板娘" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://img.ikozn.com/images/AmJ2.jpg" alt="" loading="lazy"></figure>
 <p>哎呀好可爱！</p>
 <p>这可是费了我九牛二虎之力才弄上来的</p>
 <p>对于一个不会开发的运维小萌新来说，这简直是个奇迹！</p>
@@ -853,7 +862,7 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
 <h3 id="文章">文章</h3>
 <p>暂时只恢复了一些文章用于测试，之后会陆续的恢复更多的文章。</p>
 <p>有一些质量不是很好的旧文章，和一些转载的文章，都删了，留下来也没有什么意义。</p>
-<figure data-type="image" tabindex="4"><img src="https://img.ikozn.com/images/A6eJ.jpg" alt=""></figure>
+<figure data-type="image" tabindex="4"><img src="https://img.ikozn.com/images/A6eJ.jpg" alt="" loading="lazy"></figure>
 <h3 id="最后">最后</h3>
 <p>目前所有的子站</p>
 <p><a href="https://img.ikozn.com">图床</a></p>
@@ -1253,7 +1262,7 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
         <link href="https://blog.ikozn.com/post/沉迷剑三">
         </link>
         <updated>2017-06-24T09:11:29.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/31/5abf6bb365875.jpg" alt="JX3"></figure>
+        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/31/5abf6bb365875.jpg" alt="JX3" loading="lazy"></figure>
 <blockquote>
 <p>自在逍遥！</p>
 </blockquote>
@@ -1319,19 +1328,6 @@ R3_config#ip nat inside source list ALL1 interface GigaEthernet0/4    //设置NA
 R3_config#ip nat inside source list ALL2 interface GigaEthernet0/3    //设置NAT
 R3_config#
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ NAYO图库部署完成]]></title>
-        <id>https://blog.ikozn.com/post/NAYO图库部署完成</id>
-        <link href="https://blog.ikozn.com/post/NAYO图库部署完成">
-        </link>
-        <updated>2017-02-05T11:57:20.000Z</updated>
-        <summary type="html"><![CDATA[<p>~~戳<a href="https://img.nayo.moe">这里</a>访问(๑•̀.̫•́๑)~~Nayo已死，现迁移至新<a href="https://img.ikozn.com">地址</a></p>
-]]></summary>
-        <content type="html"><![CDATA[<p>~~戳<a href="https://img.nayo.moe">这里</a>访问(๑•̀.̫•́๑)~~Nayo已死，现迁移至新<a href="https://img.ikozn.com">地址</a></p>
-<!--more-->
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/31/5abf7361d0016.jpg" alt="Miv4t"></figure>
 ]]></content>
     </entry>
 </feed>
