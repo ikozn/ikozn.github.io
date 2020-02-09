@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://blog.ikozn.com</id>
+    <id>https://6lfsv5.coding-pages.com/</id>
     <title>Hooyu&apos;s Note</title>
-    <updated>2020-01-06T19:23:33.523Z</updated>
+    <updated>2020-02-09T08:02:22.869Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://blog.ikozn.com"/>
-    <link rel="self" href="https://blog.ikozn.com/atom.xml"/>
+    <link rel="alternate" href="https://6lfsv5.coding-pages.com/"/>
+    <link rel="self" href="https://6lfsv5.coding-pages.com/atom.xml"/>
     <subtitle>🗻提灯照胆看江山</subtitle>
-    <logo>https://blog.ikozn.com/images/avatar.png</logo>
-    <icon>https://blog.ikozn.com/favicon.ico</icon>
+    <logo>https://6lfsv5.coding-pages.com/images/avatar.png</logo>
+    <icon>https://6lfsv5.coding-pages.com/favicon.ico</icon>
     <rights>All rights reserved 2020, Hooyu&apos;s Note</rights>
     <entry>
         <title type="html"><![CDATA[序 / INTRO]]></title>
-        <id>https://blog.ikozn.com/post/序</id>
-        <link href="https://blog.ikozn.com/post/序">
+        <id>https://6lfsv5.coding-pages.com/post/序</id>
+        <link href="https://6lfsv5.coding-pages.com/post/序">
         </link>
         <updated>2019-05-02T18:06:54.000Z</updated>
         <summary type="html"><![CDATA[<p>欢迎你，陌生人<br>
@@ -32,8 +32,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[本博客搜索反代上线]]></title>
-        <id>https://blog.ikozn.com/post/本博客搜索反代上线</id>
-        <link href="https://blog.ikozn.com/post/本博客搜索反代上线">
+        <id>https://6lfsv5.coding-pages.com/post/本博客搜索反代上线</id>
+        <link href="https://6lfsv5.coding-pages.com/post/本博客搜索反代上线">
         </link>
         <updated>2018-03-27T16:40:55.000Z</updated>
         <content type="html"><![CDATA[<!--more-->
@@ -45,8 +45,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[[DCN]浅谈无线VLAN的设置]]></title>
-        <id>https://blog.ikozn.com/post/DCN-浅谈无线VLAN的设置</id>
-        <link href="https://blog.ikozn.com/post/DCN-浅谈无线VLAN的设置">
+        <id>https://6lfsv5.coding-pages.com/post/DCN-浅谈无线VLAN的设置</id>
+        <link href="https://6lfsv5.coding-pages.com/post/DCN-浅谈无线VLAN的设置">
         </link>
         <updated>2018-03-12T07:22:14.000Z</updated>
         <content type="html"><![CDATA[<!--more-->
@@ -417,8 +417,8 @@ AC(config-network)#vlan 3		//设置VLAN
     </entry>
     <entry>
         <title type="html"><![CDATA[[DCN]神州数码无线常用配置]]></title>
-        <id>https://blog.ikozn.com/post/无线常用配置</id>
-        <link href="https://blog.ikozn.com/post/无线常用配置">
+        <id>https://6lfsv5.coding-pages.com/post/无线常用配置</id>
+        <link href="https://6lfsv5.coding-pages.com/post/无线常用配置">
         </link>
         <updated>2018-03-11T15:21:33.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="ap管理">AP管理</h3>
@@ -821,8 +821,8 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
     </entry>
     <entry>
         <title type="html"><![CDATA[ 我回来啦]]></title>
-        <id>https://blog.ikozn.com/post/我胡汉三回来了</id>
-        <link href="https://blog.ikozn.com/post/我胡汉三回来了">
+        <id>https://6lfsv5.coding-pages.com/post/我胡汉三回来了</id>
+        <link href="https://6lfsv5.coding-pages.com/post/我胡汉三回来了">
         </link>
         <updated>2017-12-17T12:09:00.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="新的开始我胡汉三又回来了">新的开始，我胡汉三又回来了！</h3>
@@ -865,8 +865,8 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
     </entry>
     <entry>
         <title type="html"><![CDATA[[科普]IP地址、子网划分到底是个啥？]]></title>
-        <id>https://blog.ikozn.com/post/科普-IP地址、子网划分到底是个啥？</id>
-        <link href="https://blog.ikozn.com/post/科普-IP地址、子网划分到底是个啥？">
+        <id>https://6lfsv5.coding-pages.com/post/科普-IP地址、子网划分到底是个啥？</id>
+        <link href="https://6lfsv5.coding-pages.com/post/科普-IP地址、子网划分到底是个啥？">
         </link>
         <updated>2017-12-15T10:02:04.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="什么是ip">什么是IP</h3>
@@ -1181,8 +1181,8 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
     </entry>
     <entry>
         <title type="html"><![CDATA[[Note]论如何食用KMS激活]]></title>
-        <id>https://blog.ikozn.com/post/笔记-论如何食用KMS激活</id>
-        <link href="https://blog.ikozn.com/post/笔记-论如何食用KMS激活">
+        <id>https://6lfsv5.coding-pages.com/post/笔记-论如何食用KMS激活</id>
+        <link href="https://6lfsv5.coding-pages.com/post/笔记-论如何食用KMS激活">
         </link>
         <updated>2017-12-15T09:56:40.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="kms-服务器地址">KMS 服务器地址</h3>
@@ -1249,8 +1249,8 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
     </entry>
     <entry>
         <title type="html"><![CDATA[ 沉迷剑三 ]]></title>
-        <id>https://blog.ikozn.com/post/沉迷剑三</id>
-        <link href="https://blog.ikozn.com/post/沉迷剑三">
+        <id>https://6lfsv5.coding-pages.com/post/沉迷剑三</id>
+        <link href="https://6lfsv5.coding-pages.com/post/沉迷剑三">
         </link>
         <updated>2017-06-24T09:11:29.000Z</updated>
         <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/31/5abf6bb365875.jpg" alt="JX3" loading="lazy"></figure>
@@ -1261,8 +1261,8 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
     </entry>
     <entry>
         <title type="html"><![CDATA[[实验记录]单设备双出口NAT]]></title>
-        <id>https://blog.ikozn.com/post/实验记录-单设备双出口NAT</id>
-        <link href="https://blog.ikozn.com/post/实验记录-单设备双出口NAT">
+        <id>https://6lfsv5.coding-pages.com/post/实验记录-单设备双出口NAT</id>
+        <link href="https://6lfsv5.coding-pages.com/post/实验记录-单设备双出口NAT">
         </link>
         <updated>2017-05-23T03:59:26.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="一-需求">一、需求</h2>
@@ -1323,8 +1323,8 @@ R3_config#
     </entry>
     <entry>
         <title type="html"><![CDATA[ NAYO图库部署完成]]></title>
-        <id>https://blog.ikozn.com/post/NAYO图库部署完成</id>
-        <link href="https://blog.ikozn.com/post/NAYO图库部署完成">
+        <id>https://6lfsv5.coding-pages.com/post/NAYO图库部署完成</id>
+        <link href="https://6lfsv5.coding-pages.com/post/NAYO图库部署完成">
         </link>
         <updated>2017-02-05T11:57:20.000Z</updated>
         <summary type="html"><![CDATA[<p>~~戳<a href="https://img.nayo.moe">这里</a>访问(๑•̀.̫•́๑)~~Nayo已死，现迁移至新<a href="https://img.ikozn.com">地址</a></p>
