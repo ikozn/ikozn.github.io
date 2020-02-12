@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.ikozn.com/</id>
     <title>Hooyu&apos;s Note</title>
-    <updated>2020-02-10T19:42:48.389Z</updated>
+    <updated>2020-02-12T09:35:02.268Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.ikozn.com/"/>
     <link rel="self" href="https://blog.ikozn.com/atom.xml"/>
@@ -10,6 +10,75 @@
     <logo>https://blog.ikozn.com/images/avatar.png</logo>
     <icon>https://blog.ikozn.com/favicon.ico</icon>
     <rights>All rights reserved 2020, Hooyu&apos;s Note</rights>
+    <entry>
+        <title type="html"><![CDATA[2020/02/12 - 月总结]]></title>
+        <id>https://blog.ikozn.com/post/20200210-yue-zong-jie</id>
+        <link href="https://blog.ikozn.com/post/20200210-yue-zong-jie">
+        </link>
+        <updated>2020-02-10T19:31:39.000Z</updated>
+        <summary type="html"><![CDATA[<h1 id="01-月关键词修仙-学习-摸鱼和分手">01 - 月关键词：修仙、学习、摸鱼和分手</h1>
+<p>因为疫情，图书馆闭馆，在家学习，导致了学习与摸鱼并存，感觉浪费了很多时间，效率也不高<br>
+但至少不是每天都在摸鱼中度过<br>
+受到各位大佬的影响，今天开始试着记录复盘<br>
+“每个人都是生活的记录者”</p>
+]]></summary>
+        <content type="html"><![CDATA[<h1 id="01-月关键词修仙-学习-摸鱼和分手">01 - 月关键词：修仙、学习、摸鱼和分手</h1>
+<p>因为疫情，图书馆闭馆，在家学习，导致了学习与摸鱼并存，感觉浪费了很多时间，效率也不高<br>
+但至少不是每天都在摸鱼中度过<br>
+受到各位大佬的影响，今天开始试着记录复盘<br>
+“每个人都是生活的记录者”</p>
+<!-- more -->
+<h1 id="02-最有意义的工作">02 - 最有意义的工作</h1>
+<ul>
+<li>搭建了文件管理体系，整理系统文件</li>
+<li>在ANKI上搭建了知识管理体系</li>
+<li>在Neat Reader上搭建了书籍管理体系</li>
+<li>在Notion上搭建了笔记管理体系</li>
+<li>实践了一个执行力系统</li>
+</ul>
+<h1 id="03-干得最傻的事儿">03 - 干得最傻的事儿</h1>
+<ul>
+<li>修仙，日常3~4点才睡觉，每天都睡到大中午！</li>
+<li>没有运动过，每逢佳节胖三斤...</li>
+<li>摸鱼摸的有点多噢!</li>
+</ul>
+<h1 id="04-读的书">04 - 读的书</h1>
+<ul>
+<li>《OKR工作法》（绩效、目标管理）</li>
+<li>《算法图解》（编程）</li>
+<li>《一本小小的红色写作书》（写作）</li>
+<li>《Head First JavaScript程序设计》（编程）</li>
+<li>《Head First PHP&amp;MySQL》（编程）</li>
+</ul>
+<h1 id="05-学习的讲座教程">05 - 学习的讲座/教程</h1>
+<ul>
+<li>7天电脑收纳集训营</li>
+<li>学习之道（完）</li>
+</ul>
+<h1 id="06-看的剧">06 - 看的剧</h1>
+<ul>
+<li>陈情令（国）</li>
+<li>爱情公寓5（国）</li>
+<li>生活大爆炸第一季（美）</li>
+<li>去他妈的世界第一季（英）</li>
+<li>去他妈的世界第二季（英）</li>
+</ul>
+<h1 id="07-看的电影">07 - 看的电影</h1>
+<ul>
+<li>复仇者联盟4（美）</li>
+</ul>
+<h1 id="08-在追的番">08 - 在追的番</h1>
+<ul>
+<li>仙王的日常生活（国）</li>
+<li>异度侵入 ID:INVADED（日）</li>
+<li>因为太怕痛就全点防御力了（日）</li>
+</ul>
+<h1 id="09-游戏">09 - 游戏</h1>
+<ul>
+<li>和平精英</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[序 / INTRO]]></title>
         <id>https://blog.ikozn.com/post/序</id>
@@ -1319,19 +1388,6 @@ R3_config#ip nat inside source list ALL1 interface GigaEthernet0/4    //设置NA
 R3_config#ip nat inside source list ALL2 interface GigaEthernet0/3    //设置NAT
 R3_config#
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[ NAYO图库部署完成]]></title>
-        <id>https://blog.ikozn.com/post/NAYO图库部署完成</id>
-        <link href="https://blog.ikozn.com/post/NAYO图库部署完成">
-        </link>
-        <updated>2017-02-05T11:57:20.000Z</updated>
-        <summary type="html"><![CDATA[<p>~~戳<a href="https://img.nayo.moe">这里</a>访问(๑•̀.̫•́๑)~~Nayo已死，现迁移至新<a href="https://img.ikozn.com">地址</a></p>
-]]></summary>
-        <content type="html"><![CDATA[<p>~~戳<a href="https://img.nayo.moe">这里</a>访问(๑•̀.̫•́๑)~~Nayo已死，现迁移至新<a href="https://img.ikozn.com">地址</a></p>
-<!--more-->
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/31/5abf7361d0016.jpg" alt="Miv4t" loading="lazy"></figure>
 ]]></content>
     </entry>
 </feed>
