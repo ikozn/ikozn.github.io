@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.ikozn.com/</id>
     <title>Hooyu&apos;s Note</title>
-    <updated>2020-02-13T18:35:42.958Z</updated>
+    <updated>2020-02-17T09:39:05.026Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.ikozn.com/"/>
     <link rel="self" href="https://blog.ikozn.com/atom.xml"/>
@@ -10,6 +10,22 @@
     <logo>https://blog.ikozn.com/images/avatar.png</logo>
     <icon>https://blog.ikozn.com/favicon.ico</icon>
     <rights>All rights reserved 2020, Hooyu&apos;s Note</rights>
+    <entry>
+        <title type="html"><![CDATA[2020/02/17 - 周总结]]></title>
+        <id>https://blog.ikozn.com/post/20200217-zhou-zong-jie</id>
+        <link href="https://blog.ikozn.com/post/20200217-zhou-zong-jie">
+        </link>
+        <updated>2020-02-17T09:33:41.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="01-周关键词python">01 - 周关键词：Python</h2>
+<p>人生苦短，我用Python，虽然学了一周Python连入门的水平都没到，但至少掌握了一些基础的语法。<br>
+通过学习到的知识做了个小游戏、还有本周的时间记录表</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/02/17/4VGKBwsrAjLdH2X.gif" alt="小游戏" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2020/02/17/a5Q1ZusGXpcdilw.gif" alt="时间记录表" loading="lazy"></figure>
+<h2 id="04-读的书">04 -  读的书</h2>
+<p>《Python编程：从入门到实践》</p>
+<p>整体上来说，这本对新手还是很友好的，适合任何年龄的读者阅读，它不要求你有任何Python编程经验。这本书整体分为两个部分，第一个部分学习Python基本的语法知识，第二部分是根据第一部分学的知识实战开发项目。阅读这本书可以快速上手Python.</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2020/02/12 - 月总结]]></title>
         <id>https://blog.ikozn.com/post/20200210-yue-zong-jie</id>
@@ -1327,67 +1343,5 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
 <p>自在逍遥！</p>
 </blockquote>
 <!--more-->]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[实验记录]单设备双出口NAT]]></title>
-        <id>https://blog.ikozn.com/post/实验记录-单设备双出口NAT</id>
-        <link href="https://blog.ikozn.com/post/实验记录-单设备双出口NAT">
-        </link>
-        <updated>2017-05-23T03:59:26.000Z</updated>
-        <summary type="html"><![CDATA[<h2 id="一-需求">一、需求</h2>
-<p>访问联通(20.20.20.0/24)网段的流量走联通<br>
-其他流量默认走电信<br>
-两条链路互为备份<br>
-R3为出口路由器<br>
-使用PAT进行NAT</p>
-]]></summary>
-        <content type="html"><![CDATA[<h2 id="一-需求">一、需求</h2>
-<p>访问联通(20.20.20.0/24)网段的流量走联通<br>
-其他流量默认走电信<br>
-两条链路互为备份<br>
-R3为出口路由器<br>
-使用PAT进行NAT</p>
-<!--more-->
-<h2 id="二-关键配置">二、关键配置</h2>
-<pre><code>R3_config#interface GigaEthernet0/3
-R3_config_g0/3# ip nat outside    //设置出口为outside
-R3_config_g0/3#!
-R3_config#interface GigaEthernet0/4
-R3_config_g0/4# ip nat outside    //设置出口为outside
-R3_config_g0/4#!
-R3_config#interface GigaEthernet0/5
-R3_config_g0/5# ip policy route-map PBR    //应用PBR
-R3_config_g0/5# ip nat inside    //设置出口为inside
-R3_config_g0/5#!
-R3_config#ip access-list extended LT    //匹配去往联通的流量
-R3_config_ext_nacl# permit ip any 23.23.23.0 255.255.255.0
-R3_config_ext_nacl# permit ip any 20.20.20.0 255.255.255.0
-R3_config_ext_nacl#!
-R3_config#ip access-list extended DX     //匹配出外网的其他的流量
-R3_config_ext_nacl# deny   ip any 23.23.23.0 255.255.255.0
-R3_config_ext_nacl# deny   ip any 20.20.20.0 255.255.255.0
-R3_config_ext_nacl# permit ip any any    
-R3_config_ext_nacl#!
-R3_config#ip access-list standard USER1    //匹配内网用户
-R3_config_std_nacl# permit 3.3.3.0 255.255.255.0
-R3_config_std_nacl#!
-R3_config#ip access-list standard USER2    //匹配内网用户
-R3_config_std_nacl# permit 3.3.3.0 255.255.255.0
-R3_config_std_nacl#!
-R3_config#route-map PBR 10 permit
-R3_config_route_map# match ip address LT
-R3_config_route_map# set ip next-hop 23.23.23.2 13.13.13.1 //去往联通的流量默认走联通，电信线路为备份
-R3_config_route_map#!
-R3_config#route-map PBR 20 permit
-R3_config_route_map# match ip address DX
-R3_config_route_map# set ip next-hop 13.13.13.1 23.23.23.2     //出外网的其他流量默认走电信，联通线路为
-</code></pre>
-<p>备份线路实现</p>
-<pre><code>R3_config_route_map#!
-R3_config#ip nat inside source list ALL1 interface GigaEthernet0/4    //设置NAT
-R3_config#ip nat inside source list ALL2 interface GigaEthernet0/3    //设置NAT
-R3_config#
-</code></pre>
-]]></content>
     </entry>
 </feed>
