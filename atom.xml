@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.ikozn.com/</id>
     <title>Hooyu&apos;s Note</title>
-    <updated>2020-02-17T09:40:44.925Z</updated>
+    <updated>2020-03-02T15:23:57.522Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.ikozn.com/"/>
     <link rel="self" href="https://blog.ikozn.com/atom.xml"/>
@@ -11,9 +11,43 @@
     <icon>https://blog.ikozn.com/favicon.ico</icon>
     <rights>All rights reserved 2020, Hooyu&apos;s Note</rights>
     <entry>
+        <title type="html"><![CDATA[2020/03/02 - 周总结]]></title>
+        <id>https://blog.ikozn.com/post/20200302-zhou-zong-jie/</id>
+        <link href="https://blog.ikozn.com/post/20200302-zhou-zong-jie/">
+        </link>
+        <updated>2020-03-02T14:45:34.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="01-周键词网课复习">01 - 周键词：网课/复习</h3>
+<p>开学辽，5门网课在线学习，上计算机组成原理又给上自闭了，感觉是没学过数字电路的问题，中途又去看《穿越计算机的迷雾》学了一下数字电路，泰难辽。</p>
+<p>还好，WEB开发这门课快上完了，这周就可以学完，回学校就可以直接考试了，太棒啦（误）</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/03/02/aJk6n95CifbREyv.png" alt="掉头发的网课" loading="lazy"></figure>
+<h3 id="02-本周最开心的事情">02 - 本周最开心的事情</h3>
+<ol>
+<li>
+<p>发现了一本宝藏，《穿越计算机的迷雾》</p>
+<p>这是一本计算机科普读物，只要有初中阶段的知识就可以开读啦，这本书从原子开始，然后讲解流量电路、电磁、逻辑学、逻辑电路、加法器，一步一步、从无到有地制造一台能全自动工作的计算机，在这里学习到了很多有趣的电学、数学和逻辑学知识。经常有“原来如此！”、“妙啊！”的感叹，而且作者行文也非常有趣，一下子看了个10章..<br>
+<img src="https://i.loli.net/2020/03/02/IHTjVOvmrqid9Wu.jpg" alt="封面" loading="lazy"><br>
+<img src="https://i.loli.net/2020/03/02/JqnkoZ5O8ziXHVy.png" alt="好笑的事" loading="lazy"><br>
+<img src="https://i.loli.net/2020/03/02/KRiwPktg4naSIMu.png" alt="好笑的事" loading="lazy"></p>
+</li>
+<li>
+<p>在Udemy上找了一套CSS课程“Advanced CSS and Sass: Flexbox, Grid, Animations and More!”看到了许多没学过的知识点，赶紧给整了一套，然鹅现在还没看。<br>
+<img src="https://i.loli.net/2020/03/02/4Jcjvzk5CYhg37u.png" alt="课程首页" loading="lazy"><br>
+<img src="https://i.loli.net/2020/03/02/aTCYWFc8ZEP9hm3.png" alt="课程首页" loading="lazy"></p>
+</li>
+</ol>
+<h3 id="03-读的书">03 - 读的书</h3>
+<p>《穿越计算机的迷雾》<br>
+进度：🌕🌕🌕🌕🌕🌕🌕🌑🌑🌑 67%<br>
+组成原理入门啊，科普书，安利！</p>
+<p>《CSS实战手册》<br>
+进度：🌕🌕🌕🌕🌑🌑🌑🌑🌑🌑 42%<br>
+其实已经读过一边了，再读一边复习一下</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[2020/02/17 - 周总结]]></title>
-        <id>https://blog.ikozn.com/post/20200217-zhou-zong-jie</id>
-        <link href="https://blog.ikozn.com/post/20200217-zhou-zong-jie">
+        <id>https://blog.ikozn.com/post/20200217-zhou-zong-jie/</id>
+        <link href="https://blog.ikozn.com/post/20200217-zhou-zong-jie/">
         </link>
         <updated>2020-02-17T09:33:41.000Z</updated>
         <content type="html"><![CDATA[<h2 id="01-周关键词python">01 - 周关键词：Python</h2>
@@ -28,8 +62,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[2020/02/12 - 月总结]]></title>
-        <id>https://blog.ikozn.com/post/20200210-yue-zong-jie</id>
-        <link href="https://blog.ikozn.com/post/20200210-yue-zong-jie">
+        <id>https://blog.ikozn.com/post/20200210-yue-zong-jie/</id>
+        <link href="https://blog.ikozn.com/post/20200210-yue-zong-jie/">
         </link>
         <updated>2020-02-10T19:31:39.000Z</updated>
         <summary type="html"><![CDATA[<h1 id="01-月关键词修仙-学习-摸鱼和分手">01 - 月关键词：修仙、学习、摸鱼和分手</h1>
@@ -96,29 +130,9 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[序 / INTRO]]></title>
-        <id>https://blog.ikozn.com/post/序</id>
-        <link href="https://blog.ikozn.com/post/序">
-        </link>
-        <updated>2019-05-02T18:06:54.000Z</updated>
-        <summary type="html"><![CDATA[<p>欢迎你，陌生人<br>
-不知不觉又咕咕咕了一年的博客，也不全因为太忙，只是自己的确没有多少的兴趣来写博客。<br>
-现在读了大学，学的东西多而杂，同时也对未来有了一些期待，决定重新启用博客，自己一个人悄悄的写一写东西。</p>
-<p>最后，</p>
-<p><strong>欢迎你来到这里</strong>。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>欢迎你，陌生人<br>
-不知不觉又咕咕咕了一年的博客，也不全因为太忙，只是自己的确没有多少的兴趣来写博客。<br>
-现在读了大学，学的东西多而杂，同时也对未来有了一些期待，决定重新启用博客，自己一个人悄悄的写一写东西。</p>
-<p>最后，</p>
-<p><strong>欢迎你来到这里</strong>。</p>
-<!-- more -->
-]]></content>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[本博客搜索反代上线]]></title>
-        <id>https://blog.ikozn.com/post/本博客搜索反代上线</id>
-        <link href="https://blog.ikozn.com/post/本博客搜索反代上线">
+        <id>https://blog.ikozn.com/post/本博客搜索反代上线/</id>
+        <link href="https://blog.ikozn.com/post/本博客搜索反代上线/">
         </link>
         <updated>2018-03-27T16:40:55.000Z</updated>
         <content type="html"><![CDATA[<!--more-->
@@ -130,8 +144,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[[DCN]浅谈无线VLAN的设置]]></title>
-        <id>https://blog.ikozn.com/post/DCN-浅谈无线VLAN的设置</id>
-        <link href="https://blog.ikozn.com/post/DCN-浅谈无线VLAN的设置">
+        <id>https://blog.ikozn.com/post/DCN-浅谈无线VLAN的设置/</id>
+        <link href="https://blog.ikozn.com/post/DCN-浅谈无线VLAN的设置/">
         </link>
         <updated>2018-03-12T07:22:14.000Z</updated>
         <content type="html"><![CDATA[<!--more-->
@@ -502,8 +516,8 @@ AC(config-network)#vlan 3		//设置VLAN
     </entry>
     <entry>
         <title type="html"><![CDATA[[DCN]神州数码无线常用配置]]></title>
-        <id>https://blog.ikozn.com/post/无线常用配置</id>
-        <link href="https://blog.ikozn.com/post/无线常用配置">
+        <id>https://blog.ikozn.com/post/无线常用配置/</id>
+        <link href="https://blog.ikozn.com/post/无线常用配置/">
         </link>
         <updated>2018-03-11T15:21:33.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="ap管理">AP管理</h3>
@@ -906,8 +920,8 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
     </entry>
     <entry>
         <title type="html"><![CDATA[ 我回来啦]]></title>
-        <id>https://blog.ikozn.com/post/我胡汉三回来了</id>
-        <link href="https://blog.ikozn.com/post/我胡汉三回来了">
+        <id>https://blog.ikozn.com/post/我胡汉三回来了/</id>
+        <link href="https://blog.ikozn.com/post/我胡汉三回来了/">
         </link>
         <updated>2017-12-17T12:09:00.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="新的开始我胡汉三又回来了">新的开始，我胡汉三又回来了！</h3>
@@ -950,8 +964,8 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
     </entry>
     <entry>
         <title type="html"><![CDATA[[科普]IP地址、子网划分到底是个啥？]]></title>
-        <id>https://blog.ikozn.com/post/科普-IP地址、子网划分到底是个啥？</id>
-        <link href="https://blog.ikozn.com/post/科普-IP地址、子网划分到底是个啥？">
+        <id>https://blog.ikozn.com/post/科普-IP地址、子网划分到底是个啥？/</id>
+        <link href="https://blog.ikozn.com/post/科普-IP地址、子网划分到底是个啥？/">
         </link>
         <updated>2017-12-15T10:02:04.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="什么是ip">什么是IP</h3>
@@ -1266,8 +1280,8 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
     </entry>
     <entry>
         <title type="html"><![CDATA[[Note]论如何食用KMS激活]]></title>
-        <id>https://blog.ikozn.com/post/笔记-论如何食用KMS激活</id>
-        <link href="https://blog.ikozn.com/post/笔记-论如何食用KMS激活">
+        <id>https://blog.ikozn.com/post/笔记-论如何食用KMS激活/</id>
+        <link href="https://blog.ikozn.com/post/笔记-论如何食用KMS激活/">
         </link>
         <updated>2017-12-15T09:56:40.000Z</updated>
         <summary type="html"><![CDATA[<h3 id="kms-服务器地址">KMS 服务器地址</h3>
@@ -1334,8 +1348,8 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
     </entry>
     <entry>
         <title type="html"><![CDATA[ 沉迷剑三 ]]></title>
-        <id>https://blog.ikozn.com/post/沉迷剑三</id>
-        <link href="https://blog.ikozn.com/post/沉迷剑三">
+        <id>https://blog.ikozn.com/post/沉迷剑三/</id>
+        <link href="https://blog.ikozn.com/post/沉迷剑三/">
         </link>
         <updated>2017-06-24T09:11:29.000Z</updated>
         <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/31/5abf6bb365875.jpg" alt="JX3" loading="lazy"></figure>
