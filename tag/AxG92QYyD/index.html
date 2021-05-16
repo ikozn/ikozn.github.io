@@ -1,133 +1,100 @@
-<html>
-  <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Hooyu&#39;s Note</title>
-<meta name="description" content="🗻提灯照胆看江山" />
-<link rel="shortcut icon" href="https://blog.ikozn.com//favicon.ico?v=1621176350145">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
-
+<link rel="shortcut icon" href="https://blog.ikozn.com//favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://blog.ikozn.com//media/css/tailwind.css">
 <link rel="stylesheet" href="https://blog.ikozn.com//styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="Hooyu&#39;s Note - Atom Feed" href="https://blog.ikozn.com//atom.xml">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+    
 
+  <meta name="description" content="🗻提灯照胆看江山" />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
 
-
-  </head>
-  <body>
-    <div class="head">
-  <div class="inner">
-    <a class="site-name" href="https://blog.ikozn.com/">
-        <span>Hooyu&#39;s Note</span>
-    </a>
-    <label class="burger" for="burger"></label>
-    <input id="burger" type="checkbox">
-    <button class="burger">
-      <div>
-        <span></span>
-        <span></span>
-      </div>
-    </button>
-    <nav class="info_nav">
-      
-        
-          <a href="/">首页</a>
-        
-      
-        
-          <a href="/archives">归档</a>
-        
-      
-        
-          <a href="/tags">标签</a>
-        
-      
-        
-          <a href="/post/about">关于</a>
-        
-      
-        
-          <a href="https://www.notion.so/ikozn/BookList-3cfeb2523e8b49f18da9e425b5502984" target="_blank">书单</a>
-        
-      
-    </nav>
-  </div>
-</div>
-    <div class="info _site">
-      <div class="inner">
-        <div class="info_main">
-          <h1 class="info_title"><i class="ri-price-tag-3-line"></i> 记录</h1>
-        </div>
-      </div>
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
     </div>
-    <div class="main">
-      <div class="inner">
-        <div class="items">
-  
-    <div class="item Article">
-      
-        <a class="item-image js-cover" data-src="https://i.loli.net/2020/03/02/liMRKvDz8bcJkYy.png" href="https://blog.ikozn.com/post/我胡汉三回来了/" style="background-image:url('https://i.loli.net/2020/03/02/liMRKvDz8bcJkYy.png');"></a>
-      
-      <a class="item-main" href="https://blog.ikozn.com/post/我胡汉三回来了/">
-        <div class="item-meta">
-          <time datetime="2017-12-17 20:09:00">2017-12-17</time>
-        </div>
-        <h2> 我回来啦</h2>
+  </div>
+  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        首页
+      </a>
+    
+      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        归档
+      </a>
+    
+      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        标签
+      </a>
+    
+      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        关于
+      </a>
+    
+      <a href="https://www.notion.so/ikozn/BookList-3cfeb2523e8b49f18da9e425b5502984" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        书单
+      </a>
+    
+    <a href="https://blog.ikozn.com//atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      RSS
+    </a>
+  </nav>
+</div>
+
+    <div class="max-w-4xl w-full mx-auto pt-32">
+      <h1 class="text-2xl font-bold pb-8 flex justify-center items-center">
+        <i class="ri-hashtag"></i>
+        记录
+      </h1>
+      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://blog.ikozn.com/post/我胡汉三回来了/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+           我回来啦
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2017-12-17</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <h3 id="新的开始我胡汉三又回来了">新的开始，我胡汉三又回来了！</h3>
+<p>前几个月原域名被墙，导致许多朋友都上不来.</p>
+<p>在经过一段时间的忙碌之后，终于有空闲的时间来修复了，在这里给大家说一声抱歉。</p>
+<p>不过，这都不重要！重要的是我终于回来了！并且还做了一些微小的改动。</p>
+
+      </div>
+      <a href="https://blog.ikozn.com/post/我胡汉三回来了/" class="btn">
+        Read more
       </a>
     </div>
-  
-</div>
-
-        <div class="navigation">
-  
-  
-</div>
-      </div>
-    </div>
-    <footer class="footer">
-  <div class="main">
-    <a href="https://blog.ikozn.com/">
-      <img class="avatar" src="https://blog.ikozn.com//images/avatar.png?v=1621176350145" alt="Hooyu&#39;s Note">
-    </a>
-    <div class="footer__social">
-      
-        
-          <a href="https://github.com/ikozn" target="_blank"><i class="ri-github-line"></i></a>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <p class="footer__sosumi">
-      怕什么真理无穷，进一寸有一寸的欢喜
-    </p>
-    <a class="footer-rss" href="https://blog.ikozn.com//atom.xml">RSS</a>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://i.loli.net/2020/03/02/liMRKvDz8bcJkYy.png" alt=" 我回来啦">
+    
   </div>
+  
+      </div>
+
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  怕什么真理无穷，进一寸有一寸的欢喜
 </footer>
 
-<script src="https://blog.ikozn.com//media/prism.js"></script>
-<script>
-  Prism.highlightAll()
-</script>
-
-  </body>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://blog.ikozn.com//media/scripts/main.js"></script>
+</body>
 </html>

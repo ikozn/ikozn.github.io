@@ -1,260 +1,410 @@
-<html>
-  <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Hooyu&#39;s Note</title>
-<meta name="description" content="🗻提灯照胆看江山" />
-<link rel="shortcut icon" href="https://blog.ikozn.com//favicon.ico?v=1621176350145">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
-
+<link rel="shortcut icon" href="https://blog.ikozn.com//favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://blog.ikozn.com//media/css/tailwind.css">
 <link rel="stylesheet" href="https://blog.ikozn.com//styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="Hooyu&#39;s Note - Atom Feed" href="https://blog.ikozn.com//atom.xml">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+    
 
+  <meta name="description" content="🗻提灯照胆看江山" />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
 
-
-  </head>
-  <body>
-    <div class="homepage">
-      <div class="head">
-  <div class="inner">
-    <a class="site-name" href="https://blog.ikozn.com/">
-        <span>Hooyu&#39;s Note</span>
-    </a>
-    <label class="burger" for="burger"></label>
-    <input id="burger" type="checkbox">
-    <button class="burger">
-      <div>
-        <span></span>
-        <span></span>
-      </div>
-    </button>
-    <nav class="info_nav">
-      
-        
-          <a href="/">首页</a>
-        
-      
-        
-          <a href="/archives">归档</a>
-        
-      
-        
-          <a href="/tags">标签</a>
-        
-      
-        
-          <a href="/post/about">关于</a>
-        
-      
-        
-          <a href="https://www.notion.so/ikozn/BookList-3cfeb2523e8b49f18da9e425b5502984" target="_blank">书单</a>
-        
-      
-    </nav>
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
   </div>
-</div>
-    </div>
-    <div class="info _site">
-      <div class="inner">
-        <div class="info_main">
-          
-            <h1 class="info_title"><a href="https://blog.ikozn.com/">Hooyu&#39;s Note</a></h1>
-            <h2 class="info_subtitle">🗻提灯照胆看江山</h2>
-            <nav class="info_nav">
-              
-                
-                  <a href="/">首页</a>
-                
-              
-                
-                  <a href="/archives">归档</a>
-                
-              
-                
-                  <a href="/tags">标签</a>
-                
-              
-                
-                  <a href="/post/about">关于</a>
-                
-              
-                
-                  <a href="https://www.notion.so/ikozn/BookList-3cfeb2523e8b49f18da9e425b5502984" target="_blank">书单</a>
-                
-              
-            </nav>
-          
-        </div>
-      </div>
-    </div>
-    <div class="main">
-      <div class="inner">
-        <div class="items">
-  
-    <div class="item Article">
-      
-        <a class="item-image js-cover" data-src="https://i.loli.net/2018/03/28/5aba743212c12.jpg" href="https://blog.ikozn.com/post/本博客搜索反代上线/" style="background-image:url('https://i.loli.net/2018/03/28/5aba743212c12.jpg');"></a>
-      
-      <a class="item-main" href="https://blog.ikozn.com/post/本博客搜索反代上线/">
-        <div class="item-meta">
-          <time datetime="2018-03-28 00:40:55">2018-03-28</time>
-        </div>
-        <h2>本博客搜索反代上线</h2>
+  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        首页
       </a>
-    </div>
-  
-    <div class="item Article">
-      
-        <a class="item-image js-cover" data-src="https://i.loli.net/2020/03/02/4Z7AUCa2JqlfoLT.png" href="https://blog.ikozn.com/post/DCN-浅谈无线VLAN的设置/" style="background-image:url('https://i.loli.net/2020/03/02/4Z7AUCa2JqlfoLT.png');"></a>
-      
-      <a class="item-main" href="https://blog.ikozn.com/post/DCN-浅谈无线VLAN的设置/">
-        <div class="item-meta">
-          <time datetime="2018-03-12 15:22:14">2018-03-12</time>
-        </div>
-        <h2>[DCN]浅谈无线VLAN的设置</h2>
+    
+      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        归档
       </a>
-    </div>
-  
-    <div class="item Article">
-      
-        <a class="item-image js-cover" data-src="https://i.loli.net/2020/03/02/DMAnYQhe5W9LZ63.png" href="https://blog.ikozn.com/post/无线常用配置/" style="background-image:url('https://i.loli.net/2020/03/02/DMAnYQhe5W9LZ63.png');"></a>
-      
-      <a class="item-main" href="https://blog.ikozn.com/post/无线常用配置/">
-        <div class="item-meta">
-          <time datetime="2018-03-11 23:21:33">2018-03-11</time>
-        </div>
-        <h2>[DCN]神州数码无线常用配置</h2>
+    
+      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        标签
       </a>
-    </div>
-  
-    <div class="item Article">
-      
-        <a class="item-image js-cover" data-src="https://i.loli.net/2020/03/02/liMRKvDz8bcJkYy.png" href="https://blog.ikozn.com/post/我胡汉三回来了/" style="background-image:url('https://i.loli.net/2020/03/02/liMRKvDz8bcJkYy.png');"></a>
-      
-      <a class="item-main" href="https://blog.ikozn.com/post/我胡汉三回来了/">
-        <div class="item-meta">
-          <time datetime="2017-12-17 20:09:00">2017-12-17</time>
-        </div>
-        <h2> 我回来啦</h2>
+    
+      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        关于
       </a>
-    </div>
-  
-    <div class="item Article">
-      
-        <a class="item-image js-cover" data-src="https://i.loli.net/2020/03/02/fHXEzdgiPZKuONJ.png" href="https://blog.ikozn.com/post/科普-IP地址、子网划分到底是个啥？/" style="background-image:url('https://i.loli.net/2020/03/02/fHXEzdgiPZKuONJ.png');"></a>
-      
-      <a class="item-main" href="https://blog.ikozn.com/post/科普-IP地址、子网划分到底是个啥？/">
-        <div class="item-meta">
-          <time datetime="2017-12-15 18:02:04">2017-12-15</time>
-        </div>
-        <h2>[科普]IP地址、子网划分到底是个啥？</h2>
+    
+      <a href="https://www.notion.so/ikozn/BookList-3cfeb2523e8b49f18da9e425b5502984" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        书单
       </a>
-    </div>
-  
-    <div class="item Article">
-      
-        <a class="item-image js-cover" data-src="https://i.loli.net/2020/03/02/XeWrMdGcjQLqDHJ.png" href="https://blog.ikozn.com/post/笔记-论如何食用KMS激活/" style="background-image:url('https://i.loli.net/2020/03/02/XeWrMdGcjQLqDHJ.png');"></a>
-      
-      <a class="item-main" href="https://blog.ikozn.com/post/笔记-论如何食用KMS激活/">
-        <div class="item-meta">
-          <time datetime="2017-12-15 17:56:40">2017-12-15</time>
-        </div>
-        <h2>[Note]论如何食用KMS激活</h2>
-      </a>
-    </div>
-  
-    <div class="item Article">
-      
-        <a class="item-image js-cover" data-src="https://i.loli.net/2020/03/02/Njmcyvl1P3KdSnq.png" href="https://blog.ikozn.com/post/沉迷剑三/" style="background-image:url('https://i.loli.net/2020/03/02/Njmcyvl1P3KdSnq.png');"></a>
-      
-      <a class="item-main" href="https://blog.ikozn.com/post/沉迷剑三/">
-        <div class="item-meta">
-          <time datetime="2017-06-24 17:11:29">2017-06-24</time>
-        </div>
-        <h2> 沉迷剑三 </h2>
-      </a>
-    </div>
-  
-    <div class="item Article">
-      
-        <a class="item-image js-cover" data-src="https://i.loli.net/2020/03/02/gBraNYbZKEteVhd.png" href="https://blog.ikozn.com/post/实验记录-单设备双出口NAT/" style="background-image:url('https://i.loli.net/2020/03/02/gBraNYbZKEteVhd.png');"></a>
-      
-      <a class="item-main" href="https://blog.ikozn.com/post/实验记录-单设备双出口NAT/">
-        <div class="item-meta">
-          <time datetime="2017-05-23 11:59:26">2017-05-23</time>
-        </div>
-        <h2>[实验记录]单设备双出口NAT</h2>
-      </a>
-    </div>
-  
-    <div class="item Article">
-      
-        <a class="item-image js-cover" data-src="https://i.loli.net/2020/03/02/bIAFyopr6VNt74O.png" href="https://blog.ikozn.com/post/NAYO图库部署完成/" style="background-image:url('https://i.loli.net/2020/03/02/bIAFyopr6VNt74O.png');"></a>
-      
-      <a class="item-main" href="https://blog.ikozn.com/post/NAYO图库部署完成/">
-        <div class="item-meta">
-          <time datetime="2017-02-05 19:57:20">2017-02-05</time>
-        </div>
-        <h2> NAYO图库部署完成</h2>
-      </a>
-    </div>
-  
-</div>
-
-        
-          <div class="navigation">
-  
-  
-</div>
-        
-      </div>
-    </div>
-
-    <footer class="footer">
-  <div class="main">
-    <a href="https://blog.ikozn.com/">
-      <img class="avatar" src="https://blog.ikozn.com//images/avatar.png?v=1621176350145" alt="Hooyu&#39;s Note">
+    
+    <a href="https://blog.ikozn.com//atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+      RSS
     </a>
-    <div class="footer__social">
+  </nav>
+</div>
+
+    <div class="max-w-4xl w-full mx-auto ">
       
-        
-          <a href="https://github.com/ikozn" target="_blank"><i class="ri-github-line"></i></a>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
+        <header class="flex py-16 md:py-32 mt-12 flex-col md:flex-row px-4 md:px-0 animated fadeIn">
+  <div class="flex-1 order-2 md:order-1 md:pr-16">
+    <div class="text-4xl font-bold text-center md:text-left">
+      Hooyu&#39;s Note
     </div>
-    <p class="footer__sosumi">
-      怕什么真理无穷，进一寸有一寸的欢喜
-    </p>
-    <a class="footer-rss" href="https://blog.ikozn.com//atom.xml">RSS</a>
+    <div class="text-xl text-gray-500 mt-4 text-center md:text-left">
+      🗻提灯照胆看江山
+    </div>
+    
+      <div class="mt-8 text-center md:text-left">
+        <a
+          href="/post/about" 
+          arget="_blank"
+          class="text-sm bg-yellow-50 dark:bg-indigo-500 dark:text-gray-700 font-semibold px-4 py-2 inline-block yellow-btn transition-fast rounded"
+        >LET&#39;S TALK!</a>
+      </div>
+    
+    
+      <div class="mt-8 flex items-center">
+        
+          <div class="text-gray-500 mr-2">
+            Follow me 👉
+          </div>
+        
+        
+          
+        
+          
+            
+              <a href="i@ikozn.com" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+                <i class="ri-mail-line"></i>
+              </a>
+            
+          
+        
+          
+            
+              <a href="https://github.com/ikozn" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+                <i class="ri-github-line"></i>
+              </a>
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    
   </div>
+  <div class="md:mx-8 flex-shrink-0 self-start rounded-full border-4 border-dotted border-transparent hover:border-yellow-50 p-2 w-32 h-32 order-1 md:order-2 mx-auto s3-dotted">
+    <img class="rounded-full object-cover" src="https://blog.ikozn.com//images/avatar.png?v=1621179480543" alt="Hooyu&#39;s Note" width="100%" height="100%">
+  </div>
+</header>
+      
+
+      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://blog.ikozn.com/post/javascript-bi-ji-die-dai-qi-he-sheng-cheng-qi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          JavaScript笔记：迭代器和生成器
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2021-05-16</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        前言
+
+给复习时的自己看，快速回顾
+
+迭代器快速回顾
+
+
+迭代器是一个可以由任意对象实现的接口，支持连续获取对象产出的每一个值。
+
+
+任何实现Iterable接口的对象都有一个Symbol.iterator属性，这个属性引用默认迭代器。
+
+...
+      </div>
+      <a href="https://blog.ikozn.com/post/javascript-bi-ji-die-dai-qi-he-sheng-cheng-qi/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://blog.ikozn.com/post/本博客搜索反代上线/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          本博客搜索反代上线
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2018-03-28</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+
+
+账号与密码都是上图中第一个字母小写,点这里访问
+
+...
+      </div>
+      <a href="https://blog.ikozn.com/post/本博客搜索反代上线/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://i.loli.net/2018/03/28/5aba743212c12.jpg" alt="本博客搜索反代上线">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://blog.ikozn.com/post/DCN-浅谈无线VLAN的设置/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          [DCN]浅谈无线VLAN的设置
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2018-03-12</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+首先我们来看一个常见的错误配置方式
+拓扑
+
+
+
+需求
+1.网络拓扑如上图所示，AC是无线控制器，其E1/0/1口连接着AP的LAN1口
+2.按照 表1-1 完成无线网络的配置.使用户连接WLAN使能够获取对应VLAN的IP地址。AP地址通...
+      </div>
+      <a href="https://blog.ikozn.com/post/DCN-浅谈无线VLAN的设置/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://i.loli.net/2020/03/02/4Z7AUCa2JqlfoLT.png" alt="[DCN]浅谈无线VLAN的设置">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://blog.ikozn.com/post/无线常用配置/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          [DCN]神州数码无线常用配置
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2018-03-11</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <h3 id="ap管理">AP管理</h3>
+<h4 id="ac发现ap">AC发现AP</h4>
+<h5 id="二层发现">二层发现</h5>
+<pre><code>DCWS-6028(P)(config-wireless)#discovery vlan-list 1 //指定VLAN发现列表
+DCWS-6028(P)(config-wireless)# ap database xx-xx-xx-xx-xx-xx  //添加AP MAC地址
+</code></pre>
+
+      </div>
+      <a href="https://blog.ikozn.com/post/无线常用配置/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://i.loli.net/2020/03/02/DMAnYQhe5W9LZ63.png" alt="[DCN]神州数码无线常用配置">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://blog.ikozn.com/post/我胡汉三回来了/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+           我回来啦
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2017-12-17</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <h3 id="新的开始我胡汉三又回来了">新的开始，我胡汉三又回来了！</h3>
+<p>前几个月原域名被墙，导致许多朋友都上不来.</p>
+<p>在经过一段时间的忙碌之后，终于有空闲的时间来修复了，在这里给大家说一声抱歉。</p>
+<p>不过，这都不重要！重要的是我终于回来了！并且还做了一些微小的改动。</p>
+
+      </div>
+      <a href="https://blog.ikozn.com/post/我胡汉三回来了/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://i.loli.net/2020/03/02/liMRKvDz8bcJkYy.png" alt=" 我回来啦">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://blog.ikozn.com/post/科普-IP地址、子网划分到底是个啥？/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          [科普]IP地址、子网划分到底是个啥？
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2017-12-15</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <h3 id="什么是ip">什么是IP</h3>
+<p>IP地址就是<code>网络设备</code>在网络中通信所使用的地址，将通信的数据包比作快递包裹，那么IP地址就相当于你在快递包上填的发货与收货地址。</p>
+<p>两条设备需要互相知道对方的地址，才能进行通信。</p>
+<p>一般IP地址写作<code>192.168.10.1</code>这样的形式</p>
+<p>一个IP地址由三个点分成四个小块，每个小块里都有一个十进制数来表示地址.</p>
+<p>所以这种表达IP地址的方式叫做点分十进制,也是我们使用最多的方式.</p>
+
+      </div>
+      <a href="https://blog.ikozn.com/post/科普-IP地址、子网划分到底是个啥？/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://i.loli.net/2020/03/02/fHXEzdgiPZKuONJ.png" alt="[科普]IP地址、子网划分到底是个啥？">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://blog.ikozn.com/post/笔记-论如何食用KMS激活/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          [Note]论如何食用KMS激活
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2017-12-15</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <h3 id="kms-服务器地址">KMS 服务器地址</h3>
+<p>推荐使用<a href="https://03k.org/">零散坑</a>的KMS激活服务</p>
+<pre><code>kms.03k.org
+</code></pre>
+<h3 id="kms-version">Kms version</h3>
+<pre><code>vlmcsd-1108-2017-01-19-Hotbird64
+</code></pre>
+
+      </div>
+      <a href="https://blog.ikozn.com/post/笔记-论如何食用KMS激活/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://i.loli.net/2020/03/02/XeWrMdGcjQLqDHJ.png" alt="[Note]论如何食用KMS激活">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://blog.ikozn.com/post/沉迷剑三/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+           沉迷剑三 
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2017-06-24</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        
+
+自在逍遥！
+
+...
+      </div>
+      <a href="https://blog.ikozn.com/post/沉迷剑三/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://i.loli.net/2020/03/02/Njmcyvl1P3KdSnq.png" alt=" 沉迷剑三 ">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://blog.ikozn.com/post/实验记录-单设备双出口NAT/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          [实验记录]单设备双出口NAT
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2017-05-23</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <h2 id="一-需求">一、需求</h2>
+<p>访问联通(20.20.20.0/24)网段的流量走联通<br>
+其他流量默认走电信<br>
+两条链路互为备份<br>
+R3为出口路由器<br>
+使用PAT进行NAT</p>
+
+      </div>
+      <a href="https://blog.ikozn.com/post/实验记录-单设备双出口NAT/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://i.loli.net/2020/03/02/gBraNYbZKEteVhd.png" alt="[实验记录]单设备双出口NAT">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://blog.ikozn.com/post/NAYO图库部署完成/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+           NAYO图库部署完成
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2017-02-05</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        <p>~~戳<a href="https://img.nayo.moe">这里</a>访问(๑•̀.̫•́๑)~~Nayo已死，现迁移至新<a href="https://img.ikozn.com">地址</a></p>
+
+      </div>
+      <a href="https://blog.ikozn.com/post/NAYO图库部署完成/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://i.loli.net/2020/03/02/bIAFyopr6VNt74O.png" alt=" NAYO图库部署完成">
+    
+  </div>
+  
+      </div>
+
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  怕什么真理无穷，进一寸有一寸的欢喜
 </footer>
 
-<script src="https://blog.ikozn.com//media/prism.js"></script>
-<script>
-  Prism.highlightAll()
-</script>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://blog.ikozn.com//media/scripts/main.js"></script>
+</body>
 
-  </body>
 </html>
