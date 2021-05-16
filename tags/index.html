@@ -1,227 +1,254 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Hooyu&#39;s Note</title>
-<link rel="shortcut icon" href="https://blog.ikozn.com//favicon.ico">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
-<link rel="stylesheet" href="https://blog.ikozn.com//media/css/tailwind.css">
-<link rel="stylesheet" href="https://blog.ikozn.com//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Hooyu&#39;s Note - Atom Feed" href="https://blog.ikozn.com//atom.xml">
+<meta name="description" content="🗻提灯照胆看江山" />
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico?v=1621181121520">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
-    
+<link rel="stylesheet" href="http://localhost:4000/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Hooyu&#39;s Note - Atom Feed" href="http://localhost:4000/atom.xml">
 
-  <meta name="description" content="🗻提灯照胆看江山" />
-</head>
-<body>
-  <div class="antialiased flex flex-col min-h-screen" id="app">
-    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
-  <div class="flex justify-end px-4">
-    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
-      <i class="ri-close-line" v-show="showMenu"></i>
-      <i class="ri-menu-3-line" v-show="!showMenu"></i>
-    </div>
-  </div>
-  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
-    
-      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        首页
-      </a>
-    
-      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        归档
-      </a>
-    
-      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        标签
-      </a>
-    
-      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        关于
-      </a>
-    
-      <a href="https://www.notion.so/ikozn/BookList-3cfeb2523e8b49f18da9e425b5502984" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        书单
-      </a>
-    
-    <a href="https://blog.ikozn.com//atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-      RSS
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+  </head>
+  <body>
+    <div class="head">
+  <div class="inner">
+    <a class="site-name" href="http://localhost:4000">
+        <span>Hooyu&#39;s Note</span>
     </a>
-  </nav>
-</div>
-    <div class="max-w-4xl w-full mx-auto pt-32">
-      <div class="py-8 shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/Uk35PYx0o/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              javascript（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/Y6yPFGjw4-/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              博客（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/B5OMsuQxFt/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              网站（2）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/rBDeAW-0G0/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              Nginx（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/5c-q_iCzBI/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              搜索（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/_Kz1iaYaah/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              WLAN（2）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/V5g_FuAyr_/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              无线（2）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/rEkuMBNIjl/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              神州数码（2）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/SA6_Hsrefy/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              DCN（2）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/j1B6RKT2qV/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              配置（2）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/AxG92QYyD/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              记录（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/zZjOfTSXSJ/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              IP（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/5LzxklfFml/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              原创（2）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/SJEzHm0rkg/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              网络（2）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/VW4QoPWIr5/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              科普（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/UBLJgG-cJQ/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              notes（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/GhJTHdkbn0/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              转载（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/zQOadcBbwww/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              KMS（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/JsB2KrpRMWM/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              windows（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/q7vVLsSm0/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              摸鱼（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/WQJH_9h1HpY/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              路由（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/RmIXu7SDWys/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              实验记录（1）
-            </a>
-          </div>
-        
-          <div class="px-8 pb-5 inline-flex relative overflow-hidden">
-            <a href="https://blog.ikozn.com/tag/JNvtV6_HelS/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-              <i class="ri-hashtag"></i>
-              图床（1）
-            </a>
-          </div>
-        
+    <label class="burger" for="burger"></label>
+    <input id="burger" type="checkbox">
+    <button class="burger">
+      <div>
+        <span></span>
+        <span></span>
       </div>
-      <footer class="py-12 text-center px-4 md:px-0" v-pre>
-  怕什么真理无穷，进一寸有一寸的欢喜
-</footer>
-    </div>
+    </button>
+    <nav class="info_nav">
+      
+        
+          <a href="/">首页</a>
+        
+      
+        
+          <a href="/archives">归档</a>
+        
+      
+        
+          <a href="/tags">标签</a>
+        
+      
+        
+          <a href="/post/about">关于</a>
+        
+      
+        
+          <a href="https://www.notion.so/ikozn/BookList-3cfeb2523e8b49f18da9e425b5502984" target="_blank">书单</a>
+        
+      
+    </nav>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://blog.ikozn.com//media/scripts/main.js"></script>
-</body>
+</div>
+    <div class="info _site">
+      <div class="inner">
+        <div class="info_main">
+          <h1 class="info_title"><i class="ri-price-tag-3-line"></i> 目前共计 23 个标签</h1>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="inner">
+        <div class="tags">
+          
+            <a class="tag" href="http://localhost:4000/tag/Uk35PYx0o/">
+              <div class="tag-name">javascript</div>
+              <div class="tag-count">1</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/Y6yPFGjw4-/">
+              <div class="tag-name">博客</div>
+              <div class="tag-count">1</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/B5OMsuQxFt/">
+              <div class="tag-name">网站</div>
+              <div class="tag-count">2</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/rBDeAW-0G0/">
+              <div class="tag-name">Nginx</div>
+              <div class="tag-count">1</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/5c-q_iCzBI/">
+              <div class="tag-name">搜索</div>
+              <div class="tag-count">1</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/_Kz1iaYaah/">
+              <div class="tag-name">WLAN</div>
+              <div class="tag-count">2</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/V5g_FuAyr_/">
+              <div class="tag-name">无线</div>
+              <div class="tag-count">2</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/rEkuMBNIjl/">
+              <div class="tag-name">神州数码</div>
+              <div class="tag-count">2</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/SA6_Hsrefy/">
+              <div class="tag-name">DCN</div>
+              <div class="tag-count">2</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/j1B6RKT2qV/">
+              <div class="tag-name">配置</div>
+              <div class="tag-count">2</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/AxG92QYyD/">
+              <div class="tag-name">记录</div>
+              <div class="tag-count">1</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/zZjOfTSXSJ/">
+              <div class="tag-name">IP</div>
+              <div class="tag-count">1</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/5LzxklfFml/">
+              <div class="tag-name">原创</div>
+              <div class="tag-count">2</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/SJEzHm0rkg/">
+              <div class="tag-name">网络</div>
+              <div class="tag-count">2</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/VW4QoPWIr5/">
+              <div class="tag-name">科普</div>
+              <div class="tag-count">1</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/UBLJgG-cJQ/">
+              <div class="tag-name">notes</div>
+              <div class="tag-count">1</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/GhJTHdkbn0/">
+              <div class="tag-name">转载</div>
+              <div class="tag-count">1</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/zQOadcBbwww/">
+              <div class="tag-name">KMS</div>
+              <div class="tag-count">1</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/JsB2KrpRMWM/">
+              <div class="tag-name">windows</div>
+              <div class="tag-count">1</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/q7vVLsSm0/">
+              <div class="tag-name">摸鱼</div>
+              <div class="tag-count">1</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/WQJH_9h1HpY/">
+              <div class="tag-name">路由</div>
+              <div class="tag-count">1</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/RmIXu7SDWys/">
+              <div class="tag-name">实验记录</div>
+              <div class="tag-count">1</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+            <a class="tag" href="http://localhost:4000/tag/JNvtV6_HelS/">
+              <div class="tag-name">图床</div>
+              <div class="tag-count">1</div>
+              <i class="ri-price-tag-3-line icon"></i>
+            </a>
+          
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+  <div class="main">
+    <a href="http://localhost:4000">
+      <img class="avatar" src="http://localhost:4000/images/avatar.png?v=1621181121520" alt="Hooyu&#39;s Note">
+    </a>
+    <div class="footer__social">
+      
+        
+          <a href="https://github.com/ikozn" target="_blank"><i class="ri-github-line"></i></a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <p class="footer__sosumi">
+      怕什么真理无穷，进一寸有一寸的欢喜
+    </p>
+    <a class="footer-rss" href="http://localhost:4000/atom.xml">RSS</a>
+  </div>
+</footer>
+
+<script src="http://localhost:4000/media/prism.js"></script>
+<script>
+  Prism.highlightAll()
+</script>
+
+  </body>
 </html>
