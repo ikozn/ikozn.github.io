@@ -2,133 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.ikozn.com/</id>
     <title>Hooyu&apos;s Note</title>
-    <updated>2020-03-02T15:23:57.522Z</updated>
+    <updated>2021-05-16T14:46:00.750Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.ikozn.com/"/>
     <link rel="self" href="https://blog.ikozn.com/atom.xml"/>
     <subtitle>🗻提灯照胆看江山</subtitle>
     <logo>https://blog.ikozn.com/images/avatar.png</logo>
     <icon>https://blog.ikozn.com/favicon.ico</icon>
-    <rights>All rights reserved 2020, Hooyu&apos;s Note</rights>
-    <entry>
-        <title type="html"><![CDATA[2020/03/02 - 周总结]]></title>
-        <id>https://blog.ikozn.com/post/20200302-zhou-zong-jie/</id>
-        <link href="https://blog.ikozn.com/post/20200302-zhou-zong-jie/">
-        </link>
-        <updated>2020-03-02T14:45:34.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="01-周键词网课复习">01 - 周键词：网课/复习</h3>
-<p>开学辽，5门网课在线学习，上计算机组成原理又给上自闭了，感觉是没学过数字电路的问题，中途又去看《穿越计算机的迷雾》学了一下数字电路，泰难辽。</p>
-<p>还好，WEB开发这门课快上完了，这周就可以学完，回学校就可以直接考试了，太棒啦（误）</p>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/03/02/aJk6n95CifbREyv.png" alt="掉头发的网课" loading="lazy"></figure>
-<h3 id="02-本周最开心的事情">02 - 本周最开心的事情</h3>
-<ol>
-<li>
-<p>发现了一本宝藏，《穿越计算机的迷雾》</p>
-<p>这是一本计算机科普读物，只要有初中阶段的知识就可以开读啦，这本书从原子开始，然后讲解流量电路、电磁、逻辑学、逻辑电路、加法器，一步一步、从无到有地制造一台能全自动工作的计算机，在这里学习到了很多有趣的电学、数学和逻辑学知识。经常有“原来如此！”、“妙啊！”的感叹，而且作者行文也非常有趣，一下子看了个10章..<br>
-<img src="https://i.loli.net/2020/03/02/IHTjVOvmrqid9Wu.jpg" alt="封面" loading="lazy"><br>
-<img src="https://i.loli.net/2020/03/02/JqnkoZ5O8ziXHVy.png" alt="好笑的事" loading="lazy"><br>
-<img src="https://i.loli.net/2020/03/02/KRiwPktg4naSIMu.png" alt="好笑的事" loading="lazy"></p>
-</li>
-<li>
-<p>在Udemy上找了一套CSS课程“Advanced CSS and Sass: Flexbox, Grid, Animations and More!”看到了许多没学过的知识点，赶紧给整了一套，然鹅现在还没看。<br>
-<img src="https://i.loli.net/2020/03/02/4Jcjvzk5CYhg37u.png" alt="课程首页" loading="lazy"><br>
-<img src="https://i.loli.net/2020/03/02/aTCYWFc8ZEP9hm3.png" alt="课程首页" loading="lazy"></p>
-</li>
-</ol>
-<h3 id="03-读的书">03 - 读的书</h3>
-<p>《穿越计算机的迷雾》<br>
-进度：🌕🌕🌕🌕🌕🌕🌕🌑🌑🌑 67%<br>
-组成原理入门啊，科普书，安利！</p>
-<p>《CSS实战手册》<br>
-进度：🌕🌕🌕🌕🌑🌑🌑🌑🌑🌑 42%<br>
-其实已经读过一边了，再读一边复习一下</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2020/02/17 - 周总结]]></title>
-        <id>https://blog.ikozn.com/post/20200217-zhou-zong-jie/</id>
-        <link href="https://blog.ikozn.com/post/20200217-zhou-zong-jie/">
-        </link>
-        <updated>2020-02-17T09:33:41.000Z</updated>
-        <content type="html"><![CDATA[<h2 id="01-周关键词python">01 - 周关键词：Python</h2>
-<p>人生苦短，我用Python，虽然学了一周Python连入门的水平都没到，但至少掌握了一些基础的语法。<br>
-通过学习到的知识做了个小游戏、还有本周的时间记录表</p>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/02/17/4VGKBwsrAjLdH2X.gif" alt="小游戏" loading="lazy"></figure>
-<figure data-type="image" tabindex="2"><img src="https://i.loli.net/2020/02/17/a5Q1ZusGXpcdilw.gif" alt="时间记录表" loading="lazy"></figure>
-<h2 id="04-读的书">04 -  读的书</h2>
-<p>《Python编程：从入门到实践》</p>
-<p>整体上来说，这本对新手还是很友好的，适合任何年龄的读者阅读，它不要求你有任何Python编程经验。这本书整体分为两个部分，第一个部分学习Python基本的语法知识，第二部分是根据第一部分学的知识实战开发项目。阅读这本书可以快速上手Python.</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[2020/02/12 - 月总结]]></title>
-        <id>https://blog.ikozn.com/post/20200210-yue-zong-jie/</id>
-        <link href="https://blog.ikozn.com/post/20200210-yue-zong-jie/">
-        </link>
-        <updated>2020-02-10T19:31:39.000Z</updated>
-        <summary type="html"><![CDATA[<h1 id="01-月关键词修仙-学习-摸鱼和分手">01 - 月关键词：修仙、学习、摸鱼和分手</h1>
-<p>因为疫情，图书馆闭馆，在家学习，导致了学习与摸鱼并存，感觉浪费了很多时间，效率也不高<br>
-但至少不是每天都在摸鱼中度过<br>
-受到各位大佬的影响，今天开始试着记录复盘<br>
-“每个人都是生活的记录者”</p>
-]]></summary>
-        <content type="html"><![CDATA[<h1 id="01-月关键词修仙-学习-摸鱼和分手">01 - 月关键词：修仙、学习、摸鱼和分手</h1>
-<p>因为疫情，图书馆闭馆，在家学习，导致了学习与摸鱼并存，感觉浪费了很多时间，效率也不高<br>
-但至少不是每天都在摸鱼中度过<br>
-受到各位大佬的影响，今天开始试着记录复盘<br>
-“每个人都是生活的记录者”</p>
-<!-- more -->
-<h1 id="02-最有意义的工作">02 - 最有意义的工作</h1>
-<ul>
-<li>搭建了文件管理体系，整理系统文件</li>
-<li>在ANKI上搭建了知识管理体系</li>
-<li>在Neat Reader上搭建了书籍管理体系</li>
-<li>在Notion上搭建了笔记管理体系</li>
-<li>实践了一个执行力系统</li>
-</ul>
-<h1 id="03-干得最傻的事儿">03 - 干得最傻的事儿</h1>
-<ul>
-<li>修仙，日常3~4点才睡觉，每天都睡到大中午！</li>
-<li>没有运动过，每逢佳节胖三斤...</li>
-<li>摸鱼摸的有点多噢!</li>
-</ul>
-<h1 id="04-读的书">04 - 读的书</h1>
-<ul>
-<li>《OKR工作法》（绩效、目标管理）</li>
-<li>《算法图解》（编程）</li>
-<li>《一本小小的红色写作书》（写作）</li>
-<li>《Head First JavaScript程序设计》（编程）</li>
-<li>《Head First PHP&amp;MySQL》（编程）</li>
-</ul>
-<h1 id="05-学习的讲座教程">05 - 学习的讲座/教程</h1>
-<ul>
-<li>7天电脑收纳集训营</li>
-<li>学习之道（完）</li>
-</ul>
-<h1 id="06-看的剧">06 - 看的剧</h1>
-<ul>
-<li>陈情令（国）</li>
-<li>爱情公寓5（国）</li>
-<li>生活大爆炸第一季（美）</li>
-<li>去他妈的世界第一季（英）</li>
-<li>去他妈的世界第二季（英）</li>
-</ul>
-<h1 id="07-看的电影">07 - 看的电影</h1>
-<ul>
-<li>复仇者联盟4（美）</li>
-</ul>
-<h1 id="08-在追的番">08 - 在追的番</h1>
-<ul>
-<li>仙王的日常生活（国）</li>
-<li>异度侵入 ID:INVADED（日）</li>
-<li>因为太怕痛就全点防御力了（日）</li>
-</ul>
-<h1 id="09-游戏">09 - 游戏</h1>
-<ul>
-<li>和平精英</li>
-</ul>
-]]></content>
-    </entry>
+    <rights>All rights reserved 2021, Hooyu&apos;s Note</rights>
     <entry>
         <title type="html"><![CDATA[本博客搜索反代上线]]></title>
         <id>https://blog.ikozn.com/post/本博客搜索反代上线/</id>
@@ -1357,5 +1238,80 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
 <p>自在逍遥！</p>
 </blockquote>
 <!--more-->]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[实验记录]单设备双出口NAT]]></title>
+        <id>https://blog.ikozn.com/post/实验记录-单设备双出口NAT/</id>
+        <link href="https://blog.ikozn.com/post/实验记录-单设备双出口NAT/">
+        </link>
+        <updated>2017-05-23T03:59:26.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="一-需求">一、需求</h2>
+<p>访问联通(20.20.20.0/24)网段的流量走联通<br>
+其他流量默认走电信<br>
+两条链路互为备份<br>
+R3为出口路由器<br>
+使用PAT进行NAT</p>
+]]></summary>
+        <content type="html"><![CDATA[<h2 id="一-需求">一、需求</h2>
+<p>访问联通(20.20.20.0/24)网段的流量走联通<br>
+其他流量默认走电信<br>
+两条链路互为备份<br>
+R3为出口路由器<br>
+使用PAT进行NAT</p>
+<!--more-->
+<h2 id="二-关键配置">二、关键配置</h2>
+<pre><code>R3_config#interface GigaEthernet0/3
+R3_config_g0/3# ip nat outside    //设置出口为outside
+R3_config_g0/3#!
+R3_config#interface GigaEthernet0/4
+R3_config_g0/4# ip nat outside    //设置出口为outside
+R3_config_g0/4#!
+R3_config#interface GigaEthernet0/5
+R3_config_g0/5# ip policy route-map PBR    //应用PBR
+R3_config_g0/5# ip nat inside    //设置出口为inside
+R3_config_g0/5#!
+R3_config#ip access-list extended LT    //匹配去往联通的流量
+R3_config_ext_nacl# permit ip any 23.23.23.0 255.255.255.0
+R3_config_ext_nacl# permit ip any 20.20.20.0 255.255.255.0
+R3_config_ext_nacl#!
+R3_config#ip access-list extended DX     //匹配出外网的其他的流量
+R3_config_ext_nacl# deny   ip any 23.23.23.0 255.255.255.0
+R3_config_ext_nacl# deny   ip any 20.20.20.0 255.255.255.0
+R3_config_ext_nacl# permit ip any any    
+R3_config_ext_nacl#!
+R3_config#ip access-list standard USER1    //匹配内网用户
+R3_config_std_nacl# permit 3.3.3.0 255.255.255.0
+R3_config_std_nacl#!
+R3_config#ip access-list standard USER2    //匹配内网用户
+R3_config_std_nacl# permit 3.3.3.0 255.255.255.0
+R3_config_std_nacl#!
+R3_config#route-map PBR 10 permit
+R3_config_route_map# match ip address LT
+R3_config_route_map# set ip next-hop 23.23.23.2 13.13.13.1 //去往联通的流量默认走联通，电信线路为备份
+R3_config_route_map#!
+R3_config#route-map PBR 20 permit
+R3_config_route_map# match ip address DX
+R3_config_route_map# set ip next-hop 13.13.13.1 23.23.23.2     //出外网的其他流量默认走电信，联通线路为
+</code></pre>
+<p>备份线路实现</p>
+<pre><code>R3_config_route_map#!
+R3_config#ip nat inside source list ALL1 interface GigaEthernet0/4    //设置NAT
+R3_config#ip nat inside source list ALL2 interface GigaEthernet0/3    //设置NAT
+R3_config#
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ NAYO图库部署完成]]></title>
+        <id>https://blog.ikozn.com/post/NAYO图库部署完成/</id>
+        <link href="https://blog.ikozn.com/post/NAYO图库部署完成/">
+        </link>
+        <updated>2017-02-05T11:57:20.000Z</updated>
+        <summary type="html"><![CDATA[<p>~~戳<a href="https://img.nayo.moe">这里</a>访问(๑•̀.̫•́๑)~~Nayo已死，现迁移至新<a href="https://img.ikozn.com">地址</a></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>~~戳<a href="https://img.nayo.moe">这里</a>访问(๑•̀.̫•́๑)~~Nayo已死，现迁移至新<a href="https://img.ikozn.com">地址</a></p>
+<!--more-->
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/31/5abf7361d0016.jpg" alt="Miv4t" loading="lazy"></figure>
+]]></content>
     </entry>
 </feed>
