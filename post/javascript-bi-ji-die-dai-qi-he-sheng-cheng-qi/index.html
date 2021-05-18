@@ -1,102 +1,114 @@
-<html lang="en">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
 
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>JavaScript笔记：迭代器和生成器 - Hooyu&#39;s Note</title>
-<link rel="shortcut icon" href="https://blog.ikozn.com//favicon.ico">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
-<link rel="stylesheet" href="https://blog.ikozn.com//media/css/tailwind.css">
+<title>JavaScript笔记：迭代器和生成器 | Hooyu&#39;s Note</title>
+<meta name="description" content="🗻提灯照胆看江山">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://blog.ikozn.com//favicon.ico?v=1621318323050">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://blog.ikozn.com//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="JavaScript笔记：迭代器和生成器 - Hooyu&#39;s Note - Atom Feed" href="https://blog.ikozn.com//atom.xml">
-
-    
-
-  <meta name="description" content="前言
-
-给复习时的自己看，快速回顾
-
-迭代器快速回顾
 
 
-迭代器是一个可以由任意对象实现的接口，支持连续获取对象产出的每一个值。
-
-
-任何实现Iterable接口的对象都有一个Symbol.iterator属性，这个属性引用默认迭代器。
-
-..." />
-  <meta property="og:title" content="JavaScript笔记：迭代器和生成器 - Hooyu&#39;s Note">
-  <meta property="og:description" content="前言
-
-给复习时的自己看，快速回顾
-
-迭代器快速回顾
-
-
-迭代器是一个可以由任意对象实现的接口，支持连续获取对象产出的每一个值。
-
-
-任何实现Iterable接口的对象都有一个Symbol.iterator属性，这个属性引用默认迭代器。
-
-..." />
-  <meta property="og:type" content="articles">
-  <meta property="og:url" content="https://blog.ikozn.com/post/javascript-bi-ji-die-dai-qi-he-sheng-cheng-qi/" />
-  <meta property="og:image" content="https://blog.ikozn.com//images/avatar.png">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:width" content="1200">
-  <meta name="twitter:title" content="JavaScript笔记：迭代器和生成器 - Hooyu&#39;s Note">
-  <meta name="twitter:description" content="前言
-
-给复习时的自己看，快速回顾
-
-迭代器快速回顾
-
-
-迭代器是一个可以由任意对象实现的接口，支持连续获取对象产出的每一个值。
-
-
-任何实现Iterable接口的对象都有一个Symbol.iterator属性，这个属性引用默认迭代器。
-
-...">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://blog.ikozn.com/post/javascript-bi-ji-die-dai-qi-he-sheng-cheng-qi/">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
- 
   
-    <link rel="stylesheet" href="https://blog.ikozn.com//media/css/prism-vs-light.css">
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
   
 
   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-  
-</head>
 
-<body>
-  <div class="antialiased flex flex-col min-h-screen" id="app">
-    <a href="https://blog.ikozn.com/" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
-      Hooyu&#39;s Note
-    </a>
-    <div class="max-w-4xl w-full mx-auto">
-      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
-        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
-          JavaScript笔记：迭代器和生成器
-        </h1>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://blog.ikozn.com/">
+        <img src="https://blog.ikozn.com//images/avatar.png?v=1621318323050" class="site-logo">
+        <h1 class="site-title">Hooyu&#39;s Note</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
         
-        <div class="mb-8 flex flex-wrap">
-          <div class="text-gray-400 text-sm mr-4">2021-05-16 · 27 min read</div>
-          
-            <a href="https://blog.ikozn.com/tag/Uk35PYx0o/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
-              <i class="ri-hashtag"></i>
-              javascript
-            </a>
-          
-        </div>
-        <div class="markdown mb-8" v-pre>
-          <h1 id="前言">前言</h1>
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://www.notion.so/ikozn/BookList-3cfeb2523e8b49f18da9e425b5502984" class="site-nav" target="_blank">
+            书单
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      🗻提灯照胆看江山
+    </div>
+    <div class="site-footer">
+      怕什么真理无穷，进一寸有一寸的欢喜 | <a class="rss" href="https://blog.ikozn.com//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">JavaScript笔记：迭代器和生成器</h2>
+            <div class="post-date">2021-05-16</div>
+            
+            <div class="post-content">
+              <h1 id="前言">前言</h1>
 <blockquote>
 <p>给复习时的自己看，快速回顾</p>
 </blockquote>
@@ -1258,301 +1270,83 @@ arr = [...gen];                        // [&quot;a&quot;, &quot;b&quot;, &quot;c
 <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator">Generator</a></li>
 </ul>
 
-        </div>
-        <!-- Share to Twitter, Weibo, Telegram -->
-        <div class="flex items-center">
-          <div class="mr-4 flex items-center">
-            <i class="ri-share-forward-line text-gray-500"></i>
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://blog.ikozn.com/tag/Uk35PYx0o/" class="tag">
+                    javascript
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://blog.ikozn.com/post/本博客搜索反代上线/">
+                  <h3 class="post-title">
+                    本博客搜索反代上线
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
           </div>
-          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
-            <i class="ri-twitter-line"></i>
-          </div>
-          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
-            <i class="ri-weibo-line"></i>
-          </div>
-          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
-            <i class="ri-telegram-line"></i>
-          </div>
+
         </div>
       </div>
+    </div>
 
-      
-        
-          <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script type="application/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 <script type="application/javascript">
 
-  var gitalk = new Gitalk({
-    clientID: '0db2ec692e695c68b01b',
-    clientSecret: '3db8da412bbe1c349309420810429c6121a95249',
-    repo: 'blog-comments',
-    owner: 'ikozn',
-    admin: ['ikozn'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
+AOS.init();
 
-  gitalk.render('gitalk-container')
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
 
-        
 
-        
-      
 
-      
-
-      <footer class="py-12 text-center px-4 md:px-0" v-pre>
-  怕什么真理无穷，进一寸有一寸的欢喜
-</footer>
-    </div>
-
-    <!-- TOC Container -->
-    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
-      <i class="ri-file-list-line"></i>
-    </div>
-
-    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
-      <div class="flex mb-4 justify-end">
-        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
-          <i class="ri-close-line text-lg"></i>
-        </div>
-      </div>
-      <div class="post-toc-container">
-        <ul class="markdownIt-TOC">
-<li><a href="#%E5%89%8D%E8%A8%80">前言</a>
-<ul>
-<li><a href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%BF%AB%E9%80%9F%E5%9B%9E%E9%A1%BE">迭代器快速回顾</a></li>
-<li><a href="#%E7%94%9F%E6%88%90%E5%99%A8%E5%BF%AB%E9%80%9F%E5%9B%9E%E9%A1%BE">生成器快速回顾</a></li>
-</ul>
-</li>
-<li><a href="#%E8%BF%AD%E4%BB%A3%E5%99%A8">迭代器</a>
-<ul>
-<li><a href="#what">What</a>
-<ul>
-<li><a href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F%E5%92%8C%E8%BF%AD%E4%BB%A3%E5%8D%8F%E8%AE%AE%E6%98%AF%E4%BB%80%E4%B9%88">迭代器模式和迭代协议是什么？</a></li>
-<li><a href="#%E5%8F%AF%E8%BF%AD%E4%BB%A3%E5%AF%B9%E8%B1%A1iterable-%E6%98%AF%E4%BB%80%E4%B9%88">可迭代对象/iterable 是什么？</a></li>
-<li><a href="#%E5%8F%AF%E8%BF%AD%E4%BB%A3%E5%8D%8F%E8%AE%AE-%E4%B8%8E-iterable-%E6%8E%A5%E5%8F%A3-%E6%98%AF%E4%BB%80%E4%B9%88">可迭代协议 与 Iterable 接口 是什么？</a></li>
-<li><a href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E5%8D%8F%E8%AE%AE-%E4%B8%8E-iterator%E8%BF%AD%E4%BB%A3%E5%99%A8-%E6%98%AF%E4%BB%80%E4%B9%88">迭代器协议 与 Iterator（迭代器）  是什么？</a></li>
-<li><a href="#iteratorresult%E5%AF%B9%E8%B1%A1-%E6%98%AF%E4%BB%80%E4%B9%88"><code>IteratorResult</code>对象 是什么？</a></li>
-<li><a href="#%E6%8F%90%E5%89%8D%E7%BB%88%E6%AD%A2%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8Ereturn-%E5%88%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88">提前终止迭代器与return() 分别是什么？</a></li>
-<li><a href="#%E5%85%B6%E4%BB%96">其他</a></li>
-</ul>
-</li>
-<li><a href="#how">How</a>
-<ul>
-<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%AD%E4%BB%A3%E5%99%A8">自定义迭代器</a></li>
-<li><a href="#%E4%B8%80%E4%BA%9B%E5%AE%9E%E7%8E%B0%E4%BA%86iterable%E6%8E%A5%E5%8F%A3%E7%9A%84%E5%86%85%E7%BD%AE%E7%B1%BB%E5%9E%8B">一些实现了<code>Iterable</code>接口的内置类型</a></li>
-<li><a href="#%E8%BF%AD%E4%BB%A3%E5%99%A8%E7%9A%84%E5%BA%94%E7%94%A8">迭代器的应用</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E7%94%9F%E6%88%90%E5%99%A8">生成器</a>
-<ul>
-<li><a href="#what-2">What</a>
-<ul>
-<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%94%9F%E6%88%90%E5%99%A8">什么是生成器？</a></li>
-<li><a href="#yield%E5%85%B3%E9%94%AE%E5%AD%97%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8">yield关键字有什么用？</a>
-<ul>
-<li><a href="#%E6%9A%82%E5%81%9C%E8%AE%A9%E7%94%9F%E6%88%90%E5%99%A8%E5%81%9C%E6%AD%A2%E6%89%A7%E8%A1%8C">暂停：让生成器停止执行</a></li>
-<li><a href="#%E8%BE%93%E5%87%BA%E9%80%9A%E8%BF%87yield%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE">输出：通过<code>yield</code>返回数据</a></li>
-<li><a href="#%E8%BE%93%E5%85%A5%E4%BD%9C%E4%B8%BA%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%AD%E9%97%B4%E5%8F%82%E6%95%B0%E4%BD%BF%E7%94%A8">输入：作为函数的中间参数使用</a></li>
-<li><a href="#%E5%BA%8F%E5%88%97%E5%8C%96%E9%80%9A%E8%BF%87yield%E5%B0%86%E5%8F%AF%E8%BF%AD%E4%BB%A3%E5%AF%B9%E8%B1%A1%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%BA%E4%B8%80%E8%BF%9E%E4%B8%B2%E5%80%BC">序列化：通过<code>yield*</code>将可迭代对象序列化为一连串值</a></li>
-<li><a href="#%E8%AE%A9%E6%9D%83%E9%80%9A%E8%BF%87yield%E5%B0%86%E6%89%A7%E8%A1%8C%E6%9D%83%E7%A7%BB%E4%BA%A4%E7%BB%99%E5%8F%A6%E4%B8%80%E4%B8%AA%E7%94%9F%E6%88%90%E5%99%A8">让权：通过<code>yield*</code>将执行权移交给另一个生成器</a></li>
-<li><a href="#%E8%A1%A5%E5%85%85">补充</a></li>
-</ul>
-</li>
-<li><a href="#%E6%8F%90%E5%89%8D%E7%BB%88%E6%AD%A2%E7%94%9F%E6%88%90%E5%99%A8">提前终止生成器</a></li>
-</ul>
-</li>
-<li><a href="#how-2">How</a>
-<ul>
-<li><a href="#%E5%AE%9E%E8%B7%B5">实践</a>
-<ul>
-<li><a href="#%E7%94%9F%E6%88%90%E5%99%A8%E5%AF%B9%E8%B1%A1%E4%BD%9C%E4%B8%BA%E5%8F%AF%E8%BF%AD%E4%BB%A3%E5%AF%B9%E8%B1%A1"><strong>生成器对象作为可迭代对象</strong></a></li>
-<li><a href="#%E4%BD%BF%E7%94%A8yield%E5%AE%9E%E7%8E%B0%E9%80%92%E5%BD%92%E7%AE%97%E6%B3%95"><strong>使用<code>yield*</code>实现递归算法</strong></a></li>
-</ul>
-</li>
-<li><a href="#%E5%BA%94%E7%94%A8">应用</a>
-<ul>
-<li><a href="#%E7%94%9F%E6%88%90%E5%99%A8%E4%BD%9C%E4%B8%BA%E9%BB%98%E8%AE%A4%E8%BF%AD%E4%BB%A3%E5%99%A8">生成器作为默认迭代器</a></li>
-<li><a href="#%E6%97%A0%E7%A9%B7%E8%AE%A1%E6%95%B0%E7%94%9F%E6%88%90%E5%99%A8%E5%87%BD%E6%95%B0">无穷计数生成器函数</a></li>
-<li><a href="#%E5%AE%9E%E7%8E%B0%E8%8C%83%E5%9B%B4%E5%92%8C%E5%A1%AB%E5%85%85%E6%95%B0%E7%BB%84">实现范围和填充数组</a></li>
-<li><a href="#%E9%80%92%E5%BD%92%E9%81%8D%E5%8E%86%E5%9B%BE">递归遍历图</a></li>
-<li><a href="#%E4%BD%BF%E7%94%A8%E8%BF%AD%E4%BB%A3%E5%99%A8%E9%81%8D%E5%8E%86%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E5%B9%B6%E8%BD%AC%E6%8D%A2%E6%88%90%E4%B8%80%E7%BB%B4%E6%95%B0%E7%BB%84">使用迭代器遍历二维数组并转换成一维数组</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99">学习资料</a></li>
-</ul>
-
-      </div>
-    </div>
-
-    <!-- Back to top -->
-    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
-      <i class="ri-arrow-up-line"></i>
-    </div>
-  </div>
-
-  <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-  <!-- Background of PhotoSwipe. 
-        It's a separate element as animating opacity is faster than rgba(). -->
-  <div class="pswp__bg">
-  </div>
-  <!-- Slides wrapper with overflow:hidden. -->
-  <div class="pswp__scroll-wrap">
-    <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-    <div class="pswp__container">
-      <div class="pswp__item">
-      </div>
-      <div class="pswp__item">
-      </div>
-      <div class="pswp__item">
-      </div>
-    </div>
-    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-    <div class="pswp__ui pswp__ui--hidden">
-      <div class="pswp__top-bar">
-        <!--  Controls are self-explanatory. Order can be changed. -->
-        <div class="pswp__counter">
-        </div>
-        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-        <!-- element will get class pswp__preloader--active when preloader is running -->
-        <div class="pswp__preloader">
-          <div class="pswp__preloader__icn">
-            <div class="pswp__preloader__cut">
-              <div class="pswp__preloader__donut">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-        <div class="pswp__share-tooltip">
-        </div>
-      </div>
-      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-      </button>
-      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-      </button>
-      <div class="pswp__caption">
-        <div class="pswp__caption__center">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://blog.ikozn.com//media/scripts/main.js"></script>
   
-  <!-- Code Highlight -->
-  
-    <script src="https://blog.ikozn.com//media/prism.js"></script>
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
     <script>
-      Prism.highlightAll()
+
+      var gitalk = new Gitalk({
+        clientID: '0db2ec692e695c68b01b',
+        clientSecret: '3db8da412bbe1c349309420810429c6121a95249',
+        repo: 'blog-comments',
+        owner: 'ikozn',
+        admin: ['ikozn'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
     </script>
   
 
-  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
-  <script>
-    //拿到预览框架，也就是上面的html代码
-    var pswpElement = document.querySelectorAll('.pswp')[0];
-    //定义图片数组变量
-    var imgitems;
-    /**
-    * 用于显示预览界面
-    * @param index 图片数组下标
-    */
-    function viewImg(index) {
-      //其它选项这里不做过多阐述，详情见官网
-      var pswpoptions = {
-        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
-        bgOpacity: 0.7, // 背景透明度，0-1
-        maxSpreadZoom: 3, // 缩放级别，不要太大
-      };
-      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
-      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
-      gallery.init()
-    }
-    /**
-    * 用于添加图片点击事件
-    * @param img 图片元素
-    * @param index 所属下标（在imgitems中的位置）
-    */
-    function addImgClick(img, index) {
-      img.onclick = function() {
-        viewImg(index)
-      }
-    }
-    /**
-    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
-    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
-    * 异步加载图片可在图片元素创建完成后调用此方法
-    */
-    function initImg() {
-      //重置图片数组
-      imgitems = [];
-      //查找class:markdown 下的所有img元素并遍历
-      var imgs = document.querySelectorAll('.markdown img');
-      for (var i = 0; i < imgs.length; i++) {
-        var img = imgs[i];
-        //本站相册初始为loading图片，真实图片放在data-src
-        var ds = img.getAttribute("data-src");
-        //创建image对象，用于获取图片宽高
-        var imgtemp = new Image();
-        //判断是否存在data-src
-        if (ds != null && ds.length > 0) {
-          imgtemp.src = ds
-        } else {
-          imgtemp.src = img.src
-        }
-        //判断是否存在缓存
-        if (imgtemp.complete) {
-          var imgobj = {
-            "src": imgtemp.src,
-            "w": imgtemp.width,
-            "h": imgtemp.height,
-          };
-          imgitems[i] = imgobj;
-          addImgClick(img, i);
-        } else {
-          console.log('进来了2')
-          imgtemp.index = i;
-          imgtemp.img = img;
-          imgtemp.onload = function() {
-            var imgobj = {
-              "src": this.src,
-              "w": this.width,
-              "h": this.height,
-            };
-            //不要使用push，因为onload前后顺序会不同
-            imgitems[this.index] = imgobj
-            //添加点击事件
-            addImgClick(this.img, this.index);
-          }
-        }
-      }
-    }
-    //初始化
-    initImg();
-  </script>
-</body>
+  
 
+
+
+
+  </body>
 </html>
