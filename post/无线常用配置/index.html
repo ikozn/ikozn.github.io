@@ -1,74 +1,98 @@
-<html>
-  <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>[DCN]神州数码无线常用配置 | Hooyu&#39;s Note</title>
-<meta name="description" content="🗻提灯照胆看江山" />
-<link rel="shortcut icon" href="http://localhost:4000/favicon.ico?v=1621181121520">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<html lang="en">
 
-<link rel="stylesheet" href="http://localhost:4000/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="[DCN]神州数码无线常用配置 | Hooyu&#39;s Note - Atom Feed" href="http://localhost:4000/atom.xml">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>[DCN]神州数码无线常用配置 - Hooyu&#39;s Note</title>
+<link rel="shortcut icon" href="https://blog.ikozn.com//favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://blog.ikozn.com//media/css/tailwind.css">
+<link rel="stylesheet" href="https://blog.ikozn.com//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="[DCN]神州数码无线常用配置 - Hooyu&#39;s Note - Atom Feed" href="https://blog.ikozn.com//atom.xml">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+    
 
+  <meta name="description" content="AP管理
+AC发现AP
+二层发现
+DCWS-6028(P)(config-wireless)#discovery vlan-list 1 //指定VLAN发现列表
+DCWS-6028(P)(config-wireless)# ap data..." />
+  <meta property="og:title" content="[DCN]神州数码无线常用配置 - Hooyu&#39;s Note">
+  <meta property="og:description" content="AP管理
+AC发现AP
+二层发现
+DCWS-6028(P)(config-wireless)#discovery vlan-list 1 //指定VLAN发现列表
+DCWS-6028(P)(config-wireless)# ap data..." />
+  <meta property="og:type" content="articles">
+  <meta property="og:url" content="https://blog.ikozn.com/post/无线常用配置/" />
+  <meta property="og:image" content="https://blog.ikozn.com//images/avatar.png">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="1200">
+  <meta name="twitter:title" content="[DCN]神州数码无线常用配置 - Hooyu&#39;s Note">
+  <meta name="twitter:description" content="AP管理
+AC发现AP
+二层发现
+DCWS-6028(P)(config-wireless)#discovery vlan-list 1 //指定VLAN发现列表
+DCWS-6028(P)(config-wireless)# ap data...">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://blog.ikozn.com/post/无线常用配置/">
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
+ 
+  
+    <link rel="stylesheet" href="https://blog.ikozn.com//media/css/prism-vs-light.css">
+  
 
-  </head>
-  <body>
-    <div class="site-nav no-cover">
-      <div class="head">
-  <div class="inner">
-    <a class="site-name" href="http://localhost:4000">
-        <span>Hooyu&#39;s Note</span>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+  
+</head>
+
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+    <a href="https://blog.ikozn.com/" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+      Hooyu&#39;s Note
     </a>
-    <label class="burger" for="burger"></label>
-    <input id="burger" type="checkbox">
-    <button class="burger">
-      <div>
-        <span></span>
-        <span></span>
-      </div>
-    </button>
-    <nav class="info_nav">
-      
+    <div class="max-w-4xl w-full mx-auto">
+      <div class="shadow-box bg-white dark:bg-gray-600 rounded-lg pt-32 md:pt-64 px-4 md:px-8 pb-8 animated fadeIn mb-8">
+        <h1 class="text-5xl font-semibold leading-normal pb-8 mb-8 border-b-8 border-gray-700">
+          [DCN]神州数码无线常用配置
+        </h1>
         
-          <a href="/">首页</a>
-        
-      
-        
-          <a href="/archives">归档</a>
-        
-      
-        
-          <a href="/tags">标签</a>
-        
-      
-        
-          <a href="/post/about">关于</a>
-        
-      
-        
-          <a href="https://www.notion.so/ikozn/BookList-3cfeb2523e8b49f18da9e425b5502984" target="_blank">书单</a>
-        
-      
-    </nav>
-  </div>
-</div>
-    </div>
-    <article role="main" class="hentry ">
-      
-      <h1 class="entry-title" itemprop="headline">[DCN]神州数码无线常用配置</h1>
-      <div class="entry-meta">
-        <time class="updated" datetime="2018-03-11 23:21:33">2018-03-11</time>
-        <span class="author vcard">
-          15 min read
-        </span>
-      </div>
-      <div class="post-content yue">
-        <h3 id="ap管理">AP管理</h3>
+        <div class="mb-8 flex flex-wrap">
+          <div class="text-gray-400 text-sm mr-4">2018-03-11 · 15 min read</div>
+          
+            <a href="https://blog.ikozn.com/tag/_Kz1iaYaah/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              WLAN
+            </a>
+          
+            <a href="https://blog.ikozn.com/tag/V5g_FuAyr_/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              无线
+            </a>
+          
+            <a href="https://blog.ikozn.com/tag/rEkuMBNIjl/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              神州数码
+            </a>
+          
+            <a href="https://blog.ikozn.com/tag/SA6_Hsrefy/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              DCN
+            </a>
+          
+            <a href="https://blog.ikozn.com/tag/j1B6RKT2qV/" class="text-gray-700 text-sm border-b-2 border-dotted border-gray-200 hover:border-gray-600 transition-all duration-100 inline-flex mr-2">
+              <i class="ri-hashtag"></i>
+              配置
+            </a>
+          
+        </div>
+        <div class="markdown mb-8" v-pre>
+          <h3 id="ap管理">AP管理</h3>
 <h4 id="ac发现ap">AC发现AP</h4>
 <h5 id="二层发现">二层发现</h5>
 <pre><code>DCWS-6028(P)(config-wireless)#discovery vlan-list 1 //指定VLAN发现列表
@@ -458,62 +482,32 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
 <h3 id="配置原则关系图解">配置原则关系图解</h3>
 <figure data-type="image" tabindex="1"><img src="https://i.loli.net/2018/03/11/5aa536dc8b2bb.png" alt="无线配置原则" loading="lazy"></figure>
 
-      </div>
-      <div class="entry-block">
-        <div class="entry-tags">
-          
-            <a href="http://localhost:4000/tag/_Kz1iaYaah/">
-              WLAN
-            </a>
-          
-            <a href="http://localhost:4000/tag/V5g_FuAyr_/">
-              无线
-            </a>
-          
-            <a href="http://localhost:4000/tag/rEkuMBNIjl/">
-              神州数码
-            </a>
-          
-            <a href="http://localhost:4000/tag/SA6_Hsrefy/">
-              DCN
-            </a>
-          
-            <a href="http://localhost:4000/tag/j1B6RKT2qV/">
-              配置
-            </a>
-          
+        </div>
+        <!-- Share to Twitter, Weibo, Telegram -->
+        <div class="flex items-center">
+          <div class="mr-4 flex items-center">
+            <i class="ri-share-forward-line text-gray-500"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-blue-500 hover:bg-blue-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTwitter">
+            <i class="ri-twitter-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-red-500 hover:bg-red-100 dark:hover:bg-gray-600 inline-flex" @click="shareToWeibo">
+            <i class="ri-weibo-line"></i>
+          </div>
+          <div class="px-4 cursor-pointer text-indigo-500 hover:bg-indigo-100 dark:hover:bg-gray-600 inline-flex" @click="shareToTelegram">
+            <i class="ri-telegram-line"></i>
+          </div>
         </div>
       </div>
-    </article>
-    
-      <section class="post-section prev-post">
-        <div class="inner">
-          <h3>前一篇</h3>
-          <a href="http://localhost:4000/post/DCN-浅谈无线VLAN的设置/">
-            <strong>[DCN]浅谈无线VLAN的设置</strong>
-          </a>
-        </div>
-      </section>
-    
-    
-      <section class="post-section prev-post">
-        <div class="inner">
-          <h3>后一篇</h3>
-          <a href="http://localhost:4000/post/我胡汉三回来了/">
-            <strong> 我回来啦</strong>
-          </a>
-        </div>
-      </section>
-    
 
-    
       
-        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        
+          <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script type="application/javascript" src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
 <div id="gitalk-container"></div>
 
-<script>
+<script type="application/javascript">
 
   var gitalk = new Gitalk({
     clientID: '0db2ec692e695c68b01b',
@@ -529,52 +523,283 @@ AP# set managed-ap switch-address-2 3.3.3.3 //设置备用AC地址
 
 </script>
 
+        
+
+        
       
 
       
-    
 
-    <footer class="footer">
-  <div class="main">
-    <a href="http://localhost:4000">
-      <img class="avatar" src="http://localhost:4000/images/avatar.png?v=1621181121520" alt="Hooyu&#39;s Note">
-    </a>
-    <div class="footer__social">
-      
-        
-          <a href="https://github.com/ikozn" target="_blank"><i class="ri-github-line"></i></a>
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <p class="footer__sosumi">
-      怕什么真理无穷，进一寸有一寸的欢喜
-    </p>
-    <a class="footer-rss" href="http://localhost:4000/atom.xml">RSS</a>
-  </div>
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  怕什么真理无穷，进一寸有一寸的欢喜
 </footer>
+    </div>
 
-<script src="http://localhost:4000/media/prism.js"></script>
-<script>
-  Prism.highlightAll()
-</script>
+    <!-- TOC Container -->
+    <div class="fixed right-0 bottom-0 mb-16 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white dark:bg-gray-500 dark:text-gray-200 hover:shadow-lg transition-all animated fadeInRight" @click="showToc = true">
+      <i class="ri-file-list-line"></i>
+    </div>
 
-  </body>
+    <div class="fixed right-0 top-0 bottom-0 overflow-y-auto w-64 bg-white dark:bg-gray-800 p-4 border-l border-gray-100 dark:border-gray-600 z-10 transition-fast" :class="{ '-mr-64': !showToc }">
+      <div class="flex mb-4 justify-end">
+        <div class="w-8 h-8 inline-flex justify-center items-center rounded-full cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast" @click="showToc = false">
+          <i class="ri-close-line text-lg"></i>
+        </div>
+      </div>
+      <div class="post-toc-container">
+        <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#ap%E7%AE%A1%E7%90%86">AP管理</a>
+<ul>
+<li><a href="#ac%E5%8F%91%E7%8E%B0ap">AC发现AP</a>
+<ul>
+<li><a href="#%E4%BA%8C%E5%B1%82%E5%8F%91%E7%8E%B0">二层发现</a></li>
+<li><a href="#%E4%B8%89%E5%B1%82%E5%8F%91%E7%8E%B0">三层发现</a></li>
+</ul>
+</li>
+<li><a href="#ap%E5%8F%91%E7%8E%B0ac">AP发现AC</a>
+<ul>
+<li><a href="#ap%E9%9D%99%E6%80%81%E5%8F%91%E7%8E%B0">AP静态发现</a></li>
+<li><a href="#option%E4%B8%8B%E5%8F%91ac%E5%9C%B0%E5%9D%80">Option下发AC地址</a></li>
+</ul>
+</li>
+<li><a href="#ap%E8%AE%A4%E8%AF%81">AP认证</a>
+<ul>
+<li><a href="#%E6%97%A0%E9%AA%8C%E8%AF%81">无验证</a></li>
+<li><a href="#mac%E5%9C%B0%E5%9D%80%E9%AA%8C%E8%AF%81">MAC地址验证</a></li>
+<li><a href="#%E5%AF%86%E7%A0%81%E9%AA%8C%E8%AF%81">密码验证</a></li>
+<li><a href="#%E5%BA%8F%E5%88%97%E5%8F%B7%E8%AE%A4%E8%AF%81">序列号认证</a></li>
+</ul>
+</li>
+<li><a href="#ap%E9%80%83%E7%94%9F">AP逃生</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9ap%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6">修改AP配置文件</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9ap%E7%AE%A1%E7%90%86vlan">修改AP管理VLAN</a></li>
+</ul>
+</li>
+<li><a href="#%E7%94%A8%E6%88%B7%E6%8E%A5%E5%85%A5">用户接入</a>
+<ul>
+<li><a href="#%E7%94%A8%E6%88%B7%E8%AE%A4%E8%AF%81%E6%96%B9%E5%BC%8F">用户认证方式</a>
+<ul>
+<li><a href="#wep%E8%AE%A4%E8%AF%81">WEP认证</a></li>
+<li><a href="#wpa%E4%B8%AA%E4%BA%BA%E7%89%88">WPA个人版</a></li>
+<li><a href="#wpa%E4%BC%81%E4%B8%9A%E7%89%88">WPA企业版</a></li>
+</ul>
+</li>
+<li><a href="#%E6%9C%AC%E5%9C%B0portal%E8%AE%A4%E8%AF%81">本地Portal认证</a></li>
+<li><a href="#%E5%8A%A8%E6%80%81%E9%BB%91%E5%90%8D%E5%8D%95">动态黑名单</a></li>
+<li><a href="#mac%E8%AE%A4%E8%AF%81">MAC认证</a></li>
+<li><a href="#%E6%9C%80%E5%A4%A7%E6%8E%A5%E5%85%A5%E7%94%A8%E6%88%B7%E6%95%B0">最大接入用户数</a></li>
+<li><a href="#%E9%99%90%E5%88%B6%E6%8E%A5%E5%85%A5%E6%97%B6%E9%97%B4">限制接入时间</a></li>
+<li><a href="#arp%E6%8A%91%E5%88%B6">ARP抑制</a></li>
+<li><a href="#anti-flood">Anti-flood</a></li>
+<li><a href="#%E9%9A%90%E8%97%8Fssid">隐藏SSID</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B0%84%E9%A2%91%E7%AE%A1%E7%90%86">射频管理</a>
+<ul>
+<li><a href="#%E8%B0%83%E6%95%B4%E5%B0%84%E9%A2%91%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F">调整射频工作模式</a></li>
+<li><a href="#%E8%AE%BE%E7%BD%AEap%E7%9A%84%E5%8A%9F%E7%8E%87%E5%92%8C%E4%BF%A1%E9%81%93">设置AP的功率和信道</a></li>
+<li><a href="#%E8%87%AA%E5%8A%A8%E4%BF%A1%E9%81%93%E8%B0%83%E6%95%B4">自动信道调整</a>
+<ul>
+<li><a href="#%E6%89%8B%E5%8A%A8%E8%A7%A6%E5%8F%91%E6%96%B9%E5%BC%8F">手动触发方式</a></li>
+<li><a href="#%E5%91%A8%E6%9C%9F%E6%80%A7%E8%A7%A6%E5%8F%91%E6%96%B9%E5%BC%8F">周期性触发方式</a></li>
+<li><a href="#%E5%9B%BA%E5%AE%9A%E6%97%B6%E9%97%B4%E8%A7%A6%E5%8F%91%E6%96%B9%E5%BC%8F">固定时间触发方式</a></li>
+</ul>
+</li>
+<li><a href="#%E8%87%AA%E5%8A%A8%E5%8A%9F%E7%8E%87%E8%B0%83%E6%95%B4">自动功率调整</a>
+<ul>
+<li><a href="#%E6%89%8B%E5%8A%A8%E8%A7%A6%E5%8F%91%E6%96%B9%E5%BC%8F-2">手动触发方式</a></li>
+<li><a href="#%E5%91%A8%E6%9C%9F%E6%80%A7%E8%A7%A6%E5%8F%91%E6%96%B9%E5%BC%8F-2">周期性触发方式</a></li>
+</ul>
+</li>
+<li><a href="#%E6%94%AF%E6%8C%81%E9%80%9F%E7%8E%87%E9%9B%86">支持速率集</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B5%81%E9%87%8F%E8%BD%AC%E5%8F%91">流量转发</a>
+<ul>
+<li><a href="#%E6%97%A0%E7%BA%BF%E9%9A%94%E7%A6%BB">无线隔离</a></li>
+<li><a href="#%E6%97%A0%E7%BA%BF%E5%BC%BA%E5%88%B6%E6%BC%AB%E6%B8%B8">无线强制漫游</a></li>
+<li><a href="#%E5%88%86%E5%B8%83%E5%BC%8F%E8%BD%AC%E5%8F%91">分布式转发</a></li>
+<li><a href="#%E9%9B%86%E4%B8%AD%E8%BD%AC%E5%8F%91">集中转发</a></li>
+<li><a href="#%E9%99%90%E9%80%9F">限速</a></li>
+<li><a href="#%E6%97%B6%E7%A9%BA%E5%85%AC%E5%B9%B3%E8%B0%83%E5%BA%A6">时空公平调度</a></li>
+</ul>
+</li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E7%BB%B4%E6%8A%A4%E5%91%BD%E4%BB%A4">常用维护命令</a>
+<ul>
+<li><a href="#ac%E5%B8%B8%E7%94%A8%E7%BB%B4%E6%8A%A4%E5%91%BD%E4%BB%A4">AC常用维护命令</a></li>
+<li><a href="#ap%E5%B8%B8%E7%94%A8%E7%BB%B4%E6%8A%A4%E5%91%BD%E4%BB%A4">AP常用维护命令</a></li>
+</ul>
+</li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E5%8E%9F%E5%88%99%E5%85%B3%E7%B3%BB%E5%9B%BE%E8%A7%A3">配置原则关系图解</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <div class="fixed right-0 bottom-0 mb-4 mr-4 shadow w-8 h-8 rounded-full flex justify-center items-center z-10 cursor-pointer bg-white hover:shadow-lg transition-all dark:bg-gray-500 dark:text-gray-200" @click="backToUp" v-show="scrolled">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </div>
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+        It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg">
+  </div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+      <div class="pswp__item">
+      </div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter">
+        </div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip">
+        </div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://blog.ikozn.com//media/scripts/main.js"></script>
+  
+  <!-- Code Highlight -->
+  
+    <script src="https://blog.ikozn.com//media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+  <script>
+    //拿到预览框架，也就是上面的html代码
+    var pswpElement = document.querySelectorAll('.pswp')[0];
+    //定义图片数组变量
+    var imgitems;
+    /**
+    * 用于显示预览界面
+    * @param index 图片数组下标
+    */
+    function viewImg(index) {
+      //其它选项这里不做过多阐述，详情见官网
+      var pswpoptions = {
+        index: parseInt(index, 10), // 开始幻灯片索引。0是第一张幻灯片。必须是整数，而不是字符串。
+        bgOpacity: 0.7, // 背景透明度，0-1
+        maxSpreadZoom: 3, // 缩放级别，不要太大
+      };
+      //初始化并打开PhotoSwipe，pswpElement对应上面预览框架，PhotoSwipeUI_Default为皮肤，imgitems为图片数组，pswpoptions为选项
+      var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, imgitems, pswpoptions);
+      gallery.init()
+    }
+    /**
+    * 用于添加图片点击事件
+    * @param img 图片元素
+    * @param index 所属下标（在imgitems中的位置）
+    */
+    function addImgClick(img, index) {
+      img.onclick = function() {
+        viewImg(index)
+      }
+    }
+    /**
+    * 轮询所有图片，获取src、width、height等数据，加入imgitems，并给图片元素添加事件
+    * 最好在onload中执行该方法，本站因放在最底部，所以直接初始化
+    * 异步加载图片可在图片元素创建完成后调用此方法
+    */
+    function initImg() {
+      //重置图片数组
+      imgitems = [];
+      //查找class:markdown 下的所有img元素并遍历
+      var imgs = document.querySelectorAll('.markdown img');
+      for (var i = 0; i < imgs.length; i++) {
+        var img = imgs[i];
+        //本站相册初始为loading图片，真实图片放在data-src
+        var ds = img.getAttribute("data-src");
+        //创建image对象，用于获取图片宽高
+        var imgtemp = new Image();
+        //判断是否存在data-src
+        if (ds != null && ds.length > 0) {
+          imgtemp.src = ds
+        } else {
+          imgtemp.src = img.src
+        }
+        //判断是否存在缓存
+        if (imgtemp.complete) {
+          var imgobj = {
+            "src": imgtemp.src,
+            "w": imgtemp.width,
+            "h": imgtemp.height,
+          };
+          imgitems[i] = imgobj;
+          addImgClick(img, i);
+        } else {
+          console.log('进来了2')
+          imgtemp.index = i;
+          imgtemp.img = img;
+          imgtemp.onload = function() {
+            var imgobj = {
+              "src": this.src,
+              "w": this.width,
+              "h": this.height,
+            };
+            //不要使用push，因为onload前后顺序会不同
+            imgitems[this.index] = imgobj
+            //添加点击事件
+            addImgClick(this.img, this.index);
+          }
+        }
+      }
+    }
+    //初始化
+    initImg();
+  </script>
+</body>
+
 </html>
